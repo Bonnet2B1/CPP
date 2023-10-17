@@ -1,0 +1,6 @@
+.objs
+*.o
+.DS_Store
+*.dSYM
+.vscode
+a.out
