@@ -6,7 +6,8 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 17:18:46 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/20 17:19:19 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/10/20 19:07:02 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../includes/Weapon.hpp"

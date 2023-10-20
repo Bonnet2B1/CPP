@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   zombie.hpp                                         :+:      :+:    :+:   */
+/*   Zombie.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 15:07:44 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/19 17:46:02 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/10/20 19:23:14 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ private:
 	std::string _name;
 public:
 	Zombie(){}
-	~Zombie(){}
+	~Zombie(){ std::cout << this->_name << "has been destroyed" << std::endl}
 	void set_name(std::string name){this->_name = name;}
 	void announce(void);
 };

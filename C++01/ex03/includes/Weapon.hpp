@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 17:19:21 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/20 18:41:59 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/10/20 19:29:02 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@
 class Weapon
 {
 public:
-	Weapon() {}
+	Weapon(std::string type) { _type = type; }
 	~Weapon() {}
-	std::string getType() { return (_type); }
-	std::string setType(std::string _type) const { _type = type; }
+	std::string getType() const { return (_type); }
+	void setType(std::string type) { _type = type; }
 
 private:
 	std::string _type;

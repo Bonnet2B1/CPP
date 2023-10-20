@@ -6,7 +6,7 @@
 #    By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/22 16:59:43 by edelarbr          #+#    #+#              #
-#    Updated: 2023/10/20 17:48:03 by edelarbr         ###   ########.fr        #
+#    Updated: 2023/10/20 19:05:21 by edelarbr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,9 +15,9 @@ NAME		:=	UnnecessaryViolence
 # ------------------------------ Sources -----------------------------
 
 SRCS		:=	main.cpp \
-				HumanA.cpp \
-				HumanB.cpp \
-				Weapon.cpp \
+				srcs/HumanA.cpp \
+				srcs/HumanB.cpp \
+				srcs/Weapon.cpp \
 
 OBJ_DIR		:=	.objs
 OBJS		:=	$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
