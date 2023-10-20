@@ -6,17 +6,18 @@
 #    By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/22 16:59:43 by edelarbr          #+#    #+#              #
-#    Updated: 2023/10/20 15:49:19 by edelarbr         ###   ########.fr        #
+#    Updated: 2023/10/20 17:48:03 by edelarbr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		:=	zombie
+NAME		:=	UnnecessaryViolence
 
 # ------------------------------ Sources -----------------------------
 
 SRCS		:=	main.cpp \
-				newZombie.cpp \
-				randomChump.cpp \
+				HumanA.cpp \
+				HumanB.cpp \
+				Weapon.cpp \
 
 OBJ_DIR		:=	.objs
 OBJS		:=	$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))

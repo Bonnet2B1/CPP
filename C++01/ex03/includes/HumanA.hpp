@@ -1,30 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   HumanA.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/20 00:22:54 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/20 16:36:01 by edelarbr         ###   ########.fr       */
+/*   Created: 2023/10/20 17:48:58 by edelarbr          #+#    #+#             */
+/*   Updated: 2023/10/20 18:41:28 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#ifndef HUMANA_HPP
+# define HOMANA_HPP
 
-int main(void)
+# include "Weapon.hpp"
+
+class HumanA
 {
-	std::string string = "HI THIS IS BRAIN";
-	std::string *stringPTR = &string;
-	std::string &stringREF = string;
+public:
+	void
+private:
+	std::string _name;
+	Weapon _weapon;
+};
 
-	// print address
-	std::cout << &string << std::endl;
-	std::cout << stringPTR << std::endl;
-	std::cout << &stringREF << std::endl;
-
-	// print value
-	std::cout << string << std::endl;
-	std::cout << *stringPTR << std::endl;
-	std::cout << stringREF << std::endl;
-}
+#endif
