@@ -1,17 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*   zombieHorde.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/17 23:26:04 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/17 23:47:34 by edelarbr         ###   ########.fr       */
+/*   Created: 2023/10/20 00:00:29 by edelarbr          #+#    #+#             */
+/*   Updated: 2023/10/20 00:10:14 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.hpp"
+#include "Zombie.hpp"
 
-int main(int argc, char **argv)
+Zombie *zombieHorde(int N, std::string name)
 {
+	Zombie *horde = new Zombie[N];
+
+	for (int i = 0; i < N; i++)
+		horde[i].setName(name);
+
+	return (horde);
 }
