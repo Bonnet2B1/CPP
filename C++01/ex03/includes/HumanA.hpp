@@ -6,12 +6,12 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 17:48:58 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/20 21:14:00 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/10/21 17:47:08 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HUMANA_HPP
-#define HUMANA_HPP
+# define HUMANA_HPP
 
 # include "Weapon.hpp"
 

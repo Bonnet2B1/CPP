@@ -6,14 +6,14 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/20 17:51:33 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/20 21:22:55 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/10/21 17:47:21 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HUMANB_HPP
-#define HUMANB_HPP
+# define HUMANB_HPP
 
-#include "Weapon.hpp"
+# include "Weapon.hpp"
 
 class HumanB
 {
@@ -22,7 +22,7 @@ public:
 	~HumanB() {}
 	void attack();
 	std::string getWeaponType() const { return(this->_weapon->getType()); }
-	void setWeapon(Weapon weapon) { this->_weapon = &weapon; }
+	void setWeapon(Weapon &weapon) { this->_weapon = &weapon; }
 private:
 	std::string _name;
 	Weapon *_weapon;
