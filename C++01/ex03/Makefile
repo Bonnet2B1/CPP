@@ -6,7 +6,7 @@
 #    By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/22 16:59:43 by edelarbr          #+#    #+#              #
-#    Updated: 2023/10/20 19:05:21 by edelarbr         ###   ########.fr        #
+#    Updated: 2023/10/20 21:04:21 by edelarbr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ OBJS		:=	$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 # ------------------------------ Flags -------------------------------
 
 CC			:=	c++
-FLAGS		:=	-Wall -Wextra -Werror -std=c++98
+FLAGS		:=	-Wall -Wextra -Werror -std=c++98 -g3
 RM			:=	rm -rf
 
 $(OBJ_DIR)/%.o :%.cpp
