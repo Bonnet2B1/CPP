@@ -5,30 +5,30 @@
 #                                                     +:+ +:+         +:+      #
 #    By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/10/20 20:54:50 by momox             #+#    #+#              #
-#    Updated: 2023/10/22 22:21:37 by edelarbr         ###   ########.fr        #
+#    Created: 2023/07/22 16:59:43 by edelarbr          #+#    #+#              #
+#    Updated: 2023/10/22 21:04:14 by edelarbr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		:=	UnnecessaryViolence
+NAME		:=	harlFilter
 
 # ------------------------------ Sources -----------------------------
 
 SRCS		:=	main.cpp \
+				Harl.cpp \
 
 OBJ_DIR		:=	.objs
 OBJS		:=	$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 
 # ------------------------------ Flags -------------------------------
 
-BREW		:=	$(shell brew --prefix)
-CC			:=	c++
-FLAGS		:=	-Wall -Wextra -Werror -std=c++98
+CXX			:=	c++
+CXXFLAGS		:=	-Wall -Wextra -Werror -std=c++98 -g3 -fsanitize=address
 RM			:=	rm -rf
 
 $(OBJ_DIR)/%.o :%.cpp
 	@ mkdir -p $(dir $@)
-	@ $(CC) $(FLAGS) $(INC_RL) -c $< -o $@
+	@ $(CXX) $(CXXFLAGS) $(INC_RL) -c $< -o $@
 
 # ------------------------------ Colors ------------------------------
 
@@ -45,7 +45,7 @@ all:			$(NAME)
 
 $(NAME):		$(OBJS)
 				@ echo "$(GREEN)Compilation $(CLR_RMV)of $(YELLOW)$(NAME) $(CLR_RMV)..."
-				@ $(CC) $(FLAGS) -o $(NAME) $(OBJS)
+				@ $(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 				@ echo "$(YELLOW)$(NAME) $(GREEN)created $(CLR_RMV)✔️"
 
 

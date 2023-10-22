@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 00:33:01 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/22 20:51:12 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/10/22 19:13:29 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,6 @@
 # define HARL_HPP
 
 # include <iostream>
-
-# define INPUT_IS_DEBUG 1
-# define INPUT_IS_INFO 2
-# define INPUT_IS_WARNING 3
-# define INPUT_IS_ERROR 4
 
 # define DEBUG_MSG "I love having extra bacon for my 7XL-double-cheese-triple-pickle-special-ketchup burger. I really do!\n"
 # define INFO_MSG "I cannot believe adding extra bacon costs more money. You didn't put enough bacon in my burger! If you did, I wouldn't be asking for more!\n"
