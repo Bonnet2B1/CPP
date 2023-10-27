@@ -6,66 +6,54 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 14:14:55 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/26 21:00:18 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/10/26 23:02:37 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
 
-Fixed::Fixed( void )
-{
-	std::cout << "Default constructor called\n";
+Fixed::Fixed( void ) {
 	this->_fixedPointValue = 0;
 }
 
-Fixed::Fixed( const Fixed &fixed )
-{
-	std::cout << "Copy constructor called\n";
+Fixed::Fixed( const Fixed &fixed ) {
 	*this = fixed;
 }
 
-Fixed::Fixed( const int value )
-{
-	std::cout << "Int constructor called\n";
+Fixed::Fixed( const int value ) {
 	this->_fixedPointValue = value << _fractionalBits;
 }
 
-Fixed::Fixed( const float value )
-{
-	std::cout << "Float constructor called\n";
+Fixed::Fixed( const float value ) {
 	this->_fixedPointValue = roundf(value * pow(2, _fractionalBits));
 }
 
-Fixed::~Fixed( void )
-{
-	std::cout << "Destructor called\n";
+Fixed::~Fixed( void ) {}
+
+int Fixed::getRawBits( void ) const {
+	return (this->_fixedPointValue);
 }
 
-Fixed& Fixed::operator=( const Fixed& fixed )
-{
-	std::cout << "Copy assignment operator called\n";
+float Fixed::toFloat( void ) const {
+	return (this->_fixedPointValue / pow(2, _fractionalBits));
+}
+
+int Fixed::toInt( void ) const {
+	return (this->_fixedPointValue >> _fractionalBits);
+}
+
+Fixed &Fixed::operator = ( const Fixed& fixed ) {
 	if (this != &fixed)
 		this->_fixedPointValue = fixed.getRawBits();
 	return (*this);
 }
 
-int Fixed::getRawBits( void ) const
-{
-	return (this->_fixedPointValue);
+Fixed &Fixed::operator + ( const Fixed &fixed ) {
+	// - code
+	return (*this);
 }
 
-float Fixed::toFloat( void ) const
-{
-	return (this->_fixedPointValue / pow(2, _fractionalBits));
-}
-
-int Fixed::toInt( void ) const
-{
-	return (this->_fixedPointValue >> _fractionalBits);
-}
-
-std::ostream &operator << ( std::ostream &a, const Fixed &fixed )
-{
+std::ostream &operator << ( std::ostream &a, const Fixed &fixed ) {
 	a << fixed.toFloat();
 	return (a);
 }

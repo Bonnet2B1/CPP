@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 14:14:46 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/26 19:26:51 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/10/26 22:07:04 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,14 @@ public:
 
 	int getRawBits( void ) const;
 
-	Fixed &operator = ( const Fixed &fixed );
-
 	float toFloat( void ) const;
 	int toInt( void ) const;
+
+	Fixed &operator = ( const Fixed &fixed );
+	Fixed &operator + ( const Fixed &fixed );
+	Fixed &operator - ( const Fixed &fixed );
+	Fixed &operator * ( const Fixed &fixed );
+	Fixed &operator / ( const Fixed &fixed );
 };
 
 std::ostream &operator << ( std::ostream &a, const Fixed &fixed );
