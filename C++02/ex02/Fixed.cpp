@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 14:14:55 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/26 23:02:37 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/10/27 22:57:34 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,18 +42,96 @@ int Fixed::toInt( void ) const {
 	return (this->_fixedPointValue >> _fractionalBits);
 }
 
+bool Fixed::operator == ( const Fixed fixed ) const {
+	if (this->getRawBits() == fixed.getRawBits())
+		return (true);
+	else
+	 	return (false);
+}
+
+bool Fixed::operator != ( const Fixed fixed ) const {
+	if (this->getRawBits() != fixed.getRawBits())
+		return (true);
+	else
+	 	return (false);
+}
+
+bool Fixed::operator >= ( const Fixed fixed ) const {
+	if (this->getRawBits() >= fixed.getRawBits())
+		return (true);
+	else
+	 	return (false);
+}
+
+bool Fixed::operator <= ( const Fixed fixed ) const {
+	if (this->getRawBits() <= fixed.getRawBits())
+		return (true);
+	else
+	 	return (false);
+}
+
+bool Fixed::operator > ( const Fixed fixed ) const {
+	if (this->getRawBits() >  fixed.getRawBits())
+		return (true);
+	else
+	 	return (false);
+}
+
+bool Fixed::operator < ( const Fixed fixed ) const {
+	if (this->getRawBits() <  fixed.getRawBits())
+		return (true);
+	else
+	 	return (false);
+}
+
 Fixed &Fixed::operator = ( const Fixed& fixed ) {
 	if (this != &fixed)
 		this->_fixedPointValue = fixed.getRawBits();
 	return (*this);
 }
 
-Fixed &Fixed::operator + ( const Fixed &fixed ) {
-	// - code
-	return (*this);
+Fixed Fixed::operator + ( const Fixed fixed ) const {
+	Fixed result(this->toFloat() + fixed.toFloat());
+	return (result);
+}
+
+Fixed Fixed::operator - ( const Fixed fixed ) const {
+	Fixed result(this->toFloat() - fixed.toFloat());
+	return (result);
+}
+
+Fixed Fixed::operator * ( const Fixed fixed ) const {
+	Fixed result(this->toFloat() * fixed.toFloat());
+	return (result);
+}
+
+Fixed Fixed::operator / ( const Fixed fixed ) const {
+	Fixed result(this->toFloat() / fixed.toFloat());
+	return (result);
 }
 
 std::ostream &operator << ( std::ostream &a, const Fixed &fixed ) {
 	a << fixed.toFloat();
 	return (a);
+}
+
+Fixed Fixed::operator ++ () {
+	Fixed one(1);
+	Fixed temp(*this);
+	*this = *this + one;
+	return (temp);
+}
+Fixed &Fixed::operator ++ (int) {
+	Fixed one(1);
+	return (*this = *this + one);
+}
+Fixed Fixed::operator -- () {
+	Fixed one(1);
+	Fixed temp(*this);
+	*this = *this - one;
+	return (temp);
+}
+Fixed &Fixed::operator -- (int) {
+	Fixed one(1);
+	return (*this = *this - one);
 }
