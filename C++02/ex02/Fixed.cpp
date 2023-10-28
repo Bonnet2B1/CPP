@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 14:14:55 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/27 22:57:34 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/10/28 01:05:29 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,20 +71,20 @@ bool Fixed::operator <= ( const Fixed fixed ) const {
 }
 
 bool Fixed::operator > ( const Fixed fixed ) const {
-	if (this->getRawBits() >  fixed.getRawBits())
+	if (this->getRawBits() > fixed.getRawBits())
 		return (true);
 	else
 	 	return (false);
 }
 
 bool Fixed::operator < ( const Fixed fixed ) const {
-	if (this->getRawBits() <  fixed.getRawBits())
+	if (this->getRawBits() < fixed.getRawBits())
 		return (true);
 	else
 	 	return (false);
 }
 
-Fixed &Fixed::operator = ( const Fixed& fixed ) {
+Fixed &Fixed::operator = ( const Fixed &fixed ) {
 	if (this != &fixed)
 		this->_fixedPointValue = fixed.getRawBits();
 	return (*this);
@@ -115,23 +115,24 @@ std::ostream &operator << ( std::ostream &a, const Fixed &fixed ) {
 	return (a);
 }
 
-Fixed Fixed::operator ++ () {
-	Fixed one(1);
+Fixed Fixed::operator ++ (int) {
 	Fixed temp(*this);
-	*this = *this + one;
+	this->_fixedPointValue++;
 	return (temp);
 }
-Fixed &Fixed::operator ++ (int) {
-	Fixed one(1);
-	return (*this = *this + one);
+
+Fixed &Fixed::operator ++ () {
+	this->_fixedPointValue++;
+	return (*this);
 }
-Fixed Fixed::operator -- () {
-	Fixed one(1);
+
+Fixed Fixed::operator -- (int) {
 	Fixed temp(*this);
-	*this = *this - one;
+	this->_fixedPointValue--;
 	return (temp);
 }
-Fixed &Fixed::operator -- (int) {
-	Fixed one(1);
-	return (*this = *this - one);
+
+Fixed &Fixed::operator -- () {
+	this->_fixedPointValue--;
+	return (*this);
 }
