@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 18:53:00 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/28 21:49:57 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/10/28 22:02:13 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,10 @@ int main ( void )
 	john.beRepaired(1);
 	john.takeDamage(6);
 	john.takeDamage(1);
+
 	for (int i = 0; i < 11; i++)
 		loan.beRepaired(0);
+
 	ClapTrap loanCopy(loan);
-	loan.attack(john.getName());
+	loan.attack(loanCopy.getName());
 }
