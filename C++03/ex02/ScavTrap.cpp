@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 00:09:50 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/30 00:47:31 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/10/30 10:53:29 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ ScavTrap::ScavTrap(ScavTrap const &obj){
 }
 
 ScavTrap::~ScavTrap(){
-	std::cout << "ScavTrap " << _name << " is dead" << std::endl;
+	std::cout << "ScavTrap " << _name << " was destroyed" << std::endl;
 }
 
 void ScavTrap::guardGate(){
