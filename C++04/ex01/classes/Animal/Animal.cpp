@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 18:31:50 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/31 14:55:33 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/10/31 16:07:17 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Animal::Animal() {
 	std::cout << "Animal default constructor called" << std::endl;
-	this->_brain = new Brain;
+	this->_brain = new Brain();
 }
 
 Animal::Animal(const Animal &src) {
@@ -31,7 +31,7 @@ Animal &Animal::operator = (const Animal &rhs) {
 	std::cout << "Animal assignation operator called" << std::endl;
 	if (this != &rhs) {
 		this->_type = rhs._type;
-		this->_brain = new Brain(*rhs._brain);
+		*this->_brain = Brain(*rhs._brain);
 	}
 	return (*this);
 }

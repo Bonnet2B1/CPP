@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 18:31:17 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/30 18:31:18 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/10/31 16:27:15 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include "../Animal/Animal.hpp"
 # include <iostream>
 
-class Cat : public Animal {
+class Cat : public AAnimal {
 public:
 	Cat();
 	Cat(const Cat &src);
