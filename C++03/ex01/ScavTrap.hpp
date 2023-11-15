@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 00:09:54 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/30 00:37:49 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/01 16:44:15 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ public:
 	ScavTrap(std::string name);
 	ScavTrap(ScavTrap const &obj);
 	~ScavTrap();
+
+	ScavTrap &operator = (ScavTrap const &obj);
 
 	void guardGate();
 

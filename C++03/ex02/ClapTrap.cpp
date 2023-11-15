@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 19:13:43 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/30 00:43:59 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/01 16:45:50 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,20 @@ ClapTrap::ClapTrap( const std::string name) {
 }
 
 ClapTrap::ClapTrap( const ClapTrap &obj ) {
-	this->_name = obj._name;
-	this->_hitPoints = obj._hitPoints;
-	this->_energyPoint = obj._energyPoint;
-	this->_attackDamage = obj._attackDamage;
+	*this = obj;
 	std::cout << "ClapTrap " << "<" << this->_name << "> " << "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA (but copy)\n";
 }
 
 ClapTrap::~ClapTrap( void ) {
 	std::cout << "ClapTrap " << "<" << this->_name << "> " << "Joining ancestors\n";
+}
+
+ClapTrap &ClapTrap::operator = ( const ClapTrap &obj ) {
+	this->_name = obj._name;
+	this->_hitPoints = obj._hitPoints;
+	this->_energyPoint = obj._energyPoint;
+	this->_attackDamage = obj._attackDamage;
+	return (*this);
 }
 
 /* ---------------------Getters--------------------- */

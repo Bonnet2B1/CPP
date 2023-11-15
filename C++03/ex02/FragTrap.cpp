@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 10:37:58 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/30 10:53:29 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/01 16:46:13 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,21 @@ FragTrap::FragTrap(std::string name){
 }
 
 FragTrap::FragTrap(FragTrap const &obj){
-	this->_name = obj._name;
-	this->_hitPoints = obj._hitPoints;
-	this->_energyPoint = obj._energyPoint;
-	this->_attackDamage = obj._attackDamage;
+	*this = obj;
 	std::cout << "FragTrap " << _name << " was copied" << std::endl;
 }
 
 FragTrap::~FragTrap(){
 	std::cout << "FragTrap " << _name << " was destroyed" << std::endl;
+}
+
+FragTrap &FragTrap::operator = (FragTrap const &obj){
+	this->_name = obj._name;
+	this->_hitPoints = obj._hitPoints;
+	this->_energyPoint = obj._energyPoint;
+	this->_attackDamage = obj._attackDamage;
+	std::cout << "FragTrap " << _name << " was assigned" << std::endl;
+	return (*this);
 }
 
 void FragTrap::highFivesGuys(){

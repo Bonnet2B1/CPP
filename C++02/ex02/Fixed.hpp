@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 14:14:46 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/28 01:01:08 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/01 16:42:42 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ public:
 	Fixed( const float value );
 	~Fixed( void );
 
+	Fixed &operator = ( const Fixed &fixed );
+
 	int getRawBits( void ) const;
 
 	float toFloat( void ) const;
@@ -39,8 +41,6 @@ public:
 	bool operator <= ( const Fixed fixed ) const;
 	bool operator > ( const Fixed fixed ) const;
 	bool operator < ( const Fixed fixed ) const;
-
-	Fixed &operator = ( const Fixed &fixed );
 
 	Fixed operator + ( const Fixed fixed ) const;
 	Fixed operator - ( const Fixed fixed ) const;

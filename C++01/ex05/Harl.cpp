@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 00:32:58 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/22 21:17:55 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/05 04:39:01 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ void Harl::complain( std::string level )
 
 	std::string complainLevel[4] = { "DEBUG", "INFO", "WARNING", "ERROR" };
 	ptr functions[4] = { &Harl::debug,&Harl::info, &Harl::warning, &Harl::error };
+
 	for (int i = 0; i < 4; i++)
 		if (complainLevel[i] == level)
 			(this->*functions[i])();

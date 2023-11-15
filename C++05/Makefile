@@ -6,30 +6,29 @@
 #    By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/22 16:59:43 by edelarbr          #+#    #+#              #
-#    Updated: 2023/11/05 04:41:28 by edelarbr         ###   ########.fr        #
+#    Updated: 2023/11/13 18:33:53 by edelarbr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		:=	ZombieHorde
+NAME		:=	Bureaucrat
 
 # ------------------------------ Sources -----------------------------
 
 SRCS		:=	main.cpp \
-				zombieHorde.cpp \
-				Zombie.cpp \
+				Bureaucrat.cpp \
 
 OBJ_DIR		:=	.objs
 OBJS		:=	$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 
 # ------------------------------ Flags -------------------------------
 
-CC			:=	c++
-FLAGS		:=	-Wall -Wextra -Werror -std=c++98 -g3
+CXX			:=	c++
+CXXFLAGS		:=	-Wall -Wextra -Werror -std=c++98
 RM			:=	rm -rf
 
 $(OBJ_DIR)/%.o :%.cpp
 	@ mkdir -p $(dir $@)
-	@ $(CC) $(FLAGS) $(INC_RL) -c $< -o $@
+	@ $(CXX) $(CXXFLAGS) $(INC_RL) -c $< -o $@
 
 # ------------------------------ Colors ------------------------------
 
@@ -46,7 +45,7 @@ all:			$(NAME)
 
 $(NAME):		$(OBJS)
 				@ echo "$(GREEN)Compilation $(CLR_RMV)of $(YELLOW)$(NAME) $(CLR_RMV)..."
-				@ $(CC) $(FLAGS) -o $(NAME) $(OBJS)
+				@ $(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 				@ echo "$(YELLOW)$(NAME) $(GREEN)created $(CLR_RMV)✔️"
 
 

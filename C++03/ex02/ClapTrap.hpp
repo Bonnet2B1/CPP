@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 18:54:27 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/30 00:31:08 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/01 16:45:37 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ public:
 	ClapTrap( const ClapTrap &obj );
 	ClapTrap( const std::string name );
 	~ClapTrap( void );
+
+	ClapTrap &operator = ( const ClapTrap &obj );
 
 	std::string getName( void ) const;
 

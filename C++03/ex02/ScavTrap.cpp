@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 00:09:50 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/30 10:53:29 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/01 16:46:34 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,21 @@ ScavTrap::ScavTrap(std::string name){
 }
 
 ScavTrap::ScavTrap(ScavTrap const &obj){
-	this->_name = obj._name;
-	this->_hitPoints = obj._hitPoints;
-	this->_energyPoint = obj._energyPoint;
-	this->_attackDamage = obj._attackDamage;
+	*this = obj;
 	std::cout << "ScavTrap " << _name << " was copied" << std::endl;
 }
 
 ScavTrap::~ScavTrap(){
 	std::cout << "ScavTrap " << _name << " was destroyed" << std::endl;
+}
+
+ScavTrap &ScavTrap::operator = (ScavTrap const &obj){
+	this->_name = obj._name;
+	this->_hitPoints = obj._hitPoints;
+	this->_energyPoint = obj._energyPoint;
+	this->_attackDamage = obj._attackDamage;
+	std::cout << "ScavTrap " << _name << " was assigned" << std::endl;
+	return (*this);
 }
 
 void ScavTrap::guardGate(){
