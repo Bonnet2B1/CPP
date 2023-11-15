@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 18:31:11 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/31 14:54:15 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/10/31 16:05:47 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Cat &Cat::operator = (const Cat &rhs) {
 	std::cout << "Cat assignation operator called" << std::endl;
 	if (this != &rhs) {
 		this->_type = rhs._type;
-		this->_brain = new Brain(*rhs._brain);
+		*this->_brain = Brain(*rhs._brain);
 	}
 	return (*this);
 }

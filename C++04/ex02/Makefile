@@ -6,11 +6,11 @@
 #    By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/22 16:59:43 by edelarbr          #+#    #+#              #
-#    Updated: 2023/10/31 14:27:19 by edelarbr         ###   ########.fr        #
+#    Updated: 2023/10/31 16:00:21 by edelarbr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		:=	IDoNotWantToSetTheWorldOnFire
+NAME		:= AbstractClass
 
 # ------------------------------ Sources -----------------------------
 
@@ -28,7 +28,7 @@ OBJS		:=	$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 # ------------------------------ Flags -------------------------------
 
 CXX			:=	c++
-CXXFLAGS		:=	-Wall -Wextra -Werror -std=c++98 #-g3 -fsanitize=address
+CXXFLAGS		:=	-Wall -Wextra -Werror -std=c++98 -g3 #-fsanitize=address
 RM			:=	rm -rf
 
 $(OBJ_DIR)/%.o :%.cpp

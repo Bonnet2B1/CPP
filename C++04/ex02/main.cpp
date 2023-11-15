@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:43:08 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/31 14:52:08 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/10/31 17:05:32 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 #include "classes/WrongCat/WrongCat.hpp"
 
 int main() {
-	Animal *animals[2];
+	AAnimal *animals[2];
 
 	for (int i = 0; i < 2; i++) {
 		if (i % 2 == 0)

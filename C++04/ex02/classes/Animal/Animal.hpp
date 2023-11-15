@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 18:31:53 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/31 13:47:45 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/10/31 17:06:18 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,17 +16,17 @@
 # include "../Brain/Brain.hpp"
 # include <iostream>
 
-class Animal {
+class AAnimal {
 
 public:
-	Animal();
-	Animal(const Animal &src);
-	virtual ~Animal();
-	Animal &operator = (const Animal &rhs);
+	AAnimal();
+	AAnimal(const AAnimal &src);
+	virtual ~AAnimal();
+	AAnimal &operator = (const AAnimal &rhs);
 
 	std::string getType() const;
 
-	virtual void makeSound() const;
+	virtual void makeSound() const = 0;
 
 protected:
 	std::string _type;
