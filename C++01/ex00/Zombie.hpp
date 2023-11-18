@@ -6,7 +6,11 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 15:07:44 by edelarbr          #+#    #+#             */
+<<<<<<< Updated upstream
 /*   Updated: 2023/11/05 04:44:25 by edelarbr         ###   ########.fr       */
+=======
+/*   Updated: 2023/10/22 17:31:30 by edelarbr         ###   ########.fr       */
+>>>>>>> Stashed changes
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +25,11 @@ private:
 	std::string _name;
 public:
 	Zombie(){}
+<<<<<<< Updated upstream
 	~Zombie(){ std::cout << this->_name << "has been destroyed" << std::endl;} // ! verifier si on mettre une fonction dans le .hpp
+=======
+	~Zombie(){ std::cout << this->_name << "has been destroyed" << std::endl; }
+>>>>>>> Stashed changes
 	void set_name(std::string name){this->_name = name;}
 	void announce(void);
 };

@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/22 00:33:01 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/22 20:51:12 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/15 16:20:57 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ public:
 	Harl() {}
 	~Harl() {}
 	void complain( std::string level );
-
 private:
 	void debug( void );
 	void info( void );
