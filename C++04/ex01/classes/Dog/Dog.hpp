@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 18:31:23 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/30 18:31:24 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/18 22:07:31 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,9 @@ public:
 	Dog &operator = (const Dog &rhs);
 
 	virtual void makeSound() const;
-private:
 
+private:
+	Brain *_brain;
 };
 
 #endif // DOG_HPP

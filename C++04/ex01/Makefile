@@ -6,7 +6,7 @@
 #    By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/22 16:59:43 by edelarbr          #+#    #+#              #
-#    Updated: 2023/10/31 14:27:19 by edelarbr         ###   ########.fr        #
+#    Updated: 2023/11/18 22:12:55 by edelarbr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,9 +18,7 @@ SRCS		:=	main.cpp \
 				classes/Animal/Animal.cpp \
 				classes/Dog/Dog.cpp \
 				classes/Cat/Cat.cpp \
-				classes/WrongAnimal/WrongAnimal.cpp \
-				classes/WrongCat/WrongCat.cpp \
-				classes/Brain/Brain.cpp \
+				classes/Brain/Brain.cpp
 
 OBJ_DIR		:=	.objs
 OBJS		:=	$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
@@ -28,7 +26,7 @@ OBJS		:=	$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 # ------------------------------ Flags -------------------------------
 
 CXX			:=	c++
-CXXFLAGS		:=	-Wall -Wextra -Werror -std=c++98 #-g3 -fsanitize=address
+CXXFLAGS		:=	-Wall -Wextra -Werror -std=c++98 -g3 -fsanitize=address
 RM			:=	rm -rf
 
 $(OBJ_DIR)/%.o :%.cpp

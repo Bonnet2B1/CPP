@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 18:31:11 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/31 16:05:47 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/19 00:49:42 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 Cat::Cat() {
 	std::cout << "Cat default constructor called" << std::endl;
 	this->_type = "Cat";
+	this->_brain = new Brain();
 }
 
 Cat::Cat(const Cat &src) {
@@ -24,14 +25,13 @@ Cat::Cat(const Cat &src) {
 
 Cat::~Cat() {
 	std::cout << "Cat destructor called" << std::endl;
+	delete this->_brain;
 }
 
 Cat &Cat::operator = (const Cat &rhs) {
 	std::cout << "Cat assignation operator called" << std::endl;
-	if (this != &rhs) {
-		this->_type = rhs._type;
-		*this->_brain = Brain(*rhs._brain);
-	}
+	this->_type = rhs._type;
+	this->_brain = new Brain(*rhs._brain);
 	return (*this);
 }
 

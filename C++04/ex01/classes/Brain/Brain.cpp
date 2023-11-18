@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 18:15:39 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/31 16:03:14 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/19 00:41:28 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,8 @@ Brain::~Brain() {
 Brain &Brain::operator = (const Brain &rhs) {
 	std::cout << "Brain assignation operator called" << std::endl;
 	if (this != &rhs) {
-		for (int i = 0; i < 100; i++) {
+		for (int i = 0; i < 100; i++)
 			this->ideas[i] = rhs.ideas[i];
-		}
 	}
 	return (*this);
 }

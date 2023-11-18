@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 18:31:50 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/31 16:07:17 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/18 22:11:52 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 
 Animal::Animal() {
 	std::cout << "Animal default constructor called" << std::endl;
-	this->_brain = new Brain();
 }
 
 Animal::Animal(const Animal &src) {
@@ -24,7 +23,6 @@ Animal::Animal(const Animal &src) {
 
 Animal::~Animal() {
 	std::cout << "Animal destructor called" << std::endl;
-	delete this->_brain;
 }
 
 Animal &Animal::operator = (const Animal &rhs) {
