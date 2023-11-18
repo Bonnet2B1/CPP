@@ -6,7 +6,7 @@
 #    By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/22 16:59:43 by edelarbr          #+#    #+#              #
-#    Updated: 2023/10/20 15:49:19 by edelarbr         ###   ########.fr        #
+#    Updated: 2023/11/18 17:23:40 by edelarbr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,8 +15,7 @@ NAME		:=	zombie
 # ------------------------------ Sources -----------------------------
 
 SRCS		:=	main.cpp \
-				newZombie.cpp \
-				randomChump.cpp \
+				Zombie.cpp \
 
 OBJ_DIR		:=	.objs
 OBJS		:=	$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))

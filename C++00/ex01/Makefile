@@ -6,7 +6,7 @@
 #    By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/22 16:59:43 by edelarbr          #+#    #+#              #
-#    Updated: 2023/10/17 23:28:24 by edelarbr         ###   ########.fr        #
+#    Updated: 2023/11/18 17:14:45 by edelarbr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,9 @@ NAME		:=	phonebook
 
 # ------------------------------ Sources -----------------------------
 
-SRCS		:=	phonebook.cpp \
+SRCS		:=	Phonebook.cpp \
+				Contact.cpp \
+				main.cpp \
 
 OBJ_DIR		:=	.objs
 OBJS		:=	$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))

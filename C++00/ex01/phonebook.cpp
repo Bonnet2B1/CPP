@@ -6,11 +6,11 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 23:26:04 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/19 23:50:17 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/18 16:54:36 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "phonebook.hpp"
+#include "Phonebook.hpp"
 
 std::string	format(std::string original)
 {
@@ -70,52 +70,5 @@ void	PhoneBook::set_to_null(void)
 		page[i].set_nickname(NULL);
 		page[i].set_phone_number(NULL);
 		page[i].set_darkest_secret(NULL);
-	}
-}
-
-int main(void)
-{
-	PhoneBook	book;
-	std::string	input;
-	int			i = 0;
-
-	while (1)
-	{
-		std::cout << FIRST_MENU_MESSAGE;
-		std::getline(std::cin, input);
-		std::cout << std::endl;
-		if (std::cin.eof() || input == "EXIT")
-			break;
-		if (input == "ADD")
-		{
-			std::cout << "First Name: ";
-			std::getline(std::cin, input);
-			book.page[i].set_first_name(input);
-			std::cout << "Last Name: ";
-			std::getline(std::cin, input);
-			book.page[i].set_last_name(input);
-			std::cout << "Nick Name: ";
-			std::getline(std::cin, input);
-			book.page[i].set_nickname(input);
-			std::cout << "Phone Number: ";
-			std::getline(std::cin, input);
-			book.page[i].set_phone_number(input);
-			std::cout << "Darkest secret: ";
-			std::getline(std::cin, input);
-			book.page[i].set_darkest_secret(input);
-			std::cout << std::endl;
-			if (++i == 8)
-				i = 0;
-		}
-		if (input == "SEARCH")
-		{
-			book.preview();
-			std::cout << "Contact index you want the details for: ";
-			std::getline(std::cin, input);
-			if (input == "1" || input == "2" || input == "3" || input == "4" || input == "5" || input == "6" || input == "7" || input == "8")
-				book.display_contact(book.page[std::stoi(input) - 1]);
-			else
-				std::cout << "ERROR: INVALID INDEX" << std::endl << std::endl;
-		}
 	}
 }

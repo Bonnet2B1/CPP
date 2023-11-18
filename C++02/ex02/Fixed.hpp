@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 14:14:46 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/11/01 16:42:42 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/18 19:30:52 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,33 +52,10 @@ public:
 	Fixed operator -- (int);
 	Fixed &operator -- ();
 
-	static Fixed min(Fixed &a, Fixed &b) {
-		if (a <= b)
-			return (a);
-		else
-			return (b);
-	}
-
-	static Fixed min(const Fixed &a, const Fixed &b) {
-		if (a <= b)
-			return (a);
-		else
-			return (b);
-	}
-
-	static Fixed max(Fixed &a, Fixed &b) {
-		if (a >= b)
-			return (a);
-		else
-			return (b);
-	}
-
-	static Fixed max(const Fixed &a, const Fixed &b) {
-		if (a >= b)
-			return (a);
-		else
-			return (b);
-	}
+	static Fixed min(Fixed &a, Fixed &b);
+	static Fixed min(const Fixed &a, const Fixed &b);
+	static Fixed max(Fixed &a, Fixed &b);
+	static Fixed max(const Fixed &a, const Fixed &b);
 };
 
 std::ostream &operator << ( std::ostream &a, const Fixed &fixed );

@@ -6,7 +6,7 @@
 #    By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/22 16:59:43 by edelarbr          #+#    #+#              #
-#    Updated: 2023/11/05 04:41:28 by edelarbr         ###   ########.fr        #
+#    Updated: 2023/11/18 17:29:51 by edelarbr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,6 @@ NAME		:=	ZombieHorde
 # ------------------------------ Sources -----------------------------
 
 SRCS		:=	main.cpp \
-				zombieHorde.cpp \
 				Zombie.cpp \
 
 OBJ_DIR		:=	.objs

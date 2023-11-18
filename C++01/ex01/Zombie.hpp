@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/18 15:07:44 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/25 16:31:39 by edelarbr         ###   ########.fr       */
+/*   Created: 2023/11/18 17:19:33 by edelarbr          #+#    #+#             */
+/*   Updated: 2023/11/18 17:29:08 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,15 @@ class Zombie
 {
 private:
 	std::string _name;
-
 public:
-	Zombie() {}
-	~Zombie() {}
-	void setName(std::string name) { this->_name = name; }
+	Zombie();
+	~Zombie();
+	void setName(std::string name);
 	void announce(void);
 };
 
+Zombie *newZombie(std::string name);
+void randomChump(std::string name);
 Zombie *zombieHorde(int N, std::string name);
 
-#endif
+#endif // ZOMBIE_HPP

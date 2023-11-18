@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 14:14:55 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/28 01:05:29 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/18 19:29:01 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,4 +135,32 @@ Fixed Fixed::operator -- (int) {
 Fixed &Fixed::operator -- () {
 	this->_fixedPointValue--;
 	return (*this);
+}
+
+Fixed Fixed::min(Fixed &a, Fixed &b) {
+	if (a <= b)
+		return (a);
+	else
+		return (b);
+}
+
+Fixed Fixed::min(const Fixed &a, const Fixed &b) {
+	if (a <= b)
+		return (a);
+	else
+		return (b);
+}
+
+Fixed Fixed::max(Fixed &a, Fixed &b) {
+	if (a >= b)
+		return (a);
+	else
+		return (b);
+}
+
+Fixed Fixed::max(const Fixed &a, const Fixed &b) {
+	if (a >= b)
+		return (a);
+	else
+		return (b);
 }
