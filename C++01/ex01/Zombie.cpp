@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 17:19:30 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/11/18 18:03:18 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/21 19:54:07 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,14 @@ Zombie *newZombie(std::string name)
 	zombie = new Zombie;
 	zombie->setName(name);
 	return (zombie);
+}
+
+Zombie *zombieHorde(int N, std::string name)
+{
+	Zombie *horde;
+
+	horde = new Zombie[N];
+	for (int i = 0; i < N; i++)
+		horde[i].setName(name);
+	return (horde);
 }
