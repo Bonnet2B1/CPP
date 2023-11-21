@@ -6,7 +6,7 @@
 #    By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/20 20:54:50 by momox             #+#    #+#              #
-#    Updated: 2023/11/18 17:59:18 by edelarbr         ###   ########.fr        #
+#    Updated: 2023/11/21 20:40:40 by edelarbr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,6 @@ OBJS		:=	$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 
 # ------------------------------ Flags -------------------------------
 
-BREW		:=	$(shell brew --prefix)
 CC			:=	c++
 FLAGS		:=	-Wall -Wextra -Werror -std=c++98
 RM			:=	rm -rf
