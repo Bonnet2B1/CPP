@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 16:52:10 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/11/18 17:11:32 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/21 19:20:22 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ int main(void)
 			std::cout << "Contact index you want the details for: ";
 			std::getline(std::cin, input);
 			if (input == "1" || input == "2" || input == "3" || input == "4" || input == "5" || input == "6" || input == "7" || input == "8")
-				book.display_contact(book.page[std::stoi(input) - 1]);
+				book.display_contact(book.page[input[0] - '1']);
 			else
 				std::cout << "ERROR: INVALID INDEX" << std::endl << std::endl;
 		}
