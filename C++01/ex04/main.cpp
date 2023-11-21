@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/21 19:25:01 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/22 00:28:21 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/21 21:00:09 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ int main (int argc, char** argv)
 
 	std::string newFileName = (std::string)argv[1] += ".replace";
 	std::ofstream newFile;
-	newFile.open(newFileName);
+	newFile.open(newFileName.c_str());
 	if (!newFile.is_open())
 		return (std::cout << "Error creating" << newFileName << std::endl, 1);
 
@@ -57,3 +57,28 @@ int main (int argc, char** argv)
 	srcFile.close();
 	return (0);
 }
+
+// int main (int argc, char** argv)
+// {
+// 	if (argc != 4)
+// 		return (std::cout << "Wrong number of arguments" << std::endl, 1);
+
+// 	std::ifstream srcFile;
+// 	srcFile.open(argv[1]);
+// 	if (!srcFile.is_open())
+// 		return (std::cout << "Can't open " << argv[1] << std::endl, 1);
+
+// 	std::string newFileName = (std::string)argv[1] += ".replace";
+// 	std::ofstream newFile;
+// 	newFile.open(newFileName);
+// 	if (!newFile.is_open())
+// 		return (std::cout << "Error creating" << newFileName << std::endl, 1);
+
+// 	std::string line;
+// 	while (std::getline(srcFile, line))
+// 		newFile << modifiedLine(line, (std::string)argv[2], (std::string)argv[3]);
+
+// 	newFile.close();
+// 	srcFile.close();
+// 	return (0);
+// }
