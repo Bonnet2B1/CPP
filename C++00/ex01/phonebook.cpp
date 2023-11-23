@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.cpp                                      :+:      :+:    :+:   */
+/*   Phonebook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 23:26:04 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/11/18 16:54:36 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/23 20:17:44 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,8 @@ void	PhoneBook::preview(void)
 		std::cout << std::right << std::setw(10) << format(page[i].get_last_name()) << "|";
 		std::cout << std::right << std::setw(10) << format(page[i].get_nickname()) << "|";
 		std::cout << std::right << std::setw(10) << format(page[i].get_phone_number()) << "|";
-		std::cout << std::right << std::setw(10) << format(page[i].get_darkest_secret()) << "|" << std::endl;
+		std::cout << std::right << std::setw(10) << format(page[i].get_darkest_secret()) << "|";
+		std::cout << std::endl;
 	}
 	std::cout << std::endl;
 }

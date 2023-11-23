@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 16:52:10 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/11/21 19:20:22 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/23 20:12:32 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,18 +32,23 @@ int main(void)
 			std::cout << "First Name: ";
 			std::getline(std::cin, input);
 			book.page[i].set_first_name(input);
+
 			std::cout << "Last Name: ";
 			std::getline(std::cin, input);
 			book.page[i].set_last_name(input);
+
 			std::cout << "Nick Name: ";
 			std::getline(std::cin, input);
 			book.page[i].set_nickname(input);
+
 			std::cout << "Phone Number: ";
 			std::getline(std::cin, input);
 			book.page[i].set_phone_number(input);
+
 			std::cout << "Darkest secret: ";
 			std::getline(std::cin, input);
 			book.page[i].set_darkest_secret(input);
+
 			std::cout << std::endl;
 			if (++i == 8)
 				i = 0;
