@@ -6,11 +6,19 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/25 14:14:55 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/11/18 19:29:01 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/27 14:14:30 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Fixed.hpp"
+
+double myPow(double base, int exponent) {
+	double result = 1.0;
+	for(int i = 0; i < exponent; i++) {
+		result *= base;
+	}
+	return result;
+}
 
 Fixed::Fixed( void ) {
 	this->_fixedPointValue = 0;
@@ -25,7 +33,7 @@ Fixed::Fixed( const int value ) {
 }
 
 Fixed::Fixed( const float value ) {
-	this->_fixedPointValue = roundf(value * pow(2, _fractionalBits));
+	this->_fixedPointValue = roundf(value * myPow(2, _fractionalBits));
 }
 
 Fixed::~Fixed( void ) {}
@@ -35,7 +43,7 @@ int Fixed::getRawBits( void ) const {
 }
 
 float Fixed::toFloat( void ) const {
-	return (this->_fixedPointValue / pow(2, _fractionalBits));
+	return (this->_fixedPointValue / myPow(2, _fractionalBits));
 }
 
 int Fixed::toInt( void ) const {
