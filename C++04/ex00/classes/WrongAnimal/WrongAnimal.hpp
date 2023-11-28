@@ -9,7 +9,7 @@ public:
 	WrongAnimal();
 	WrongAnimal(const WrongAnimal &src);
 	virtual ~WrongAnimal();
-	WrongAnimal &operator = (const WrongAnimal &rhs);
+	WrongAnimal &operator = (const WrongAnimal &obj);
 
 	std::string getType() const;
 
@@ -17,8 +17,6 @@ public:
 
 protected:
 	std::string type;
-
-private:
 
 };
 

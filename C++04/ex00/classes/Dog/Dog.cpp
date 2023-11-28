@@ -13,9 +13,9 @@ Dog::~Dog() {
 	std::cout << "Dog destructor called" << std::endl;
 }
 
-Dog &Dog::operator = (const Dog &rhs) {
-	if (this != &rhs) {
-		this->type = rhs.type;
+Dog &Dog::operator = (const Dog &obj) {
+	if (this != &obj) {
+		this->type = obj.type;
 	}
 	return (*this);
 }

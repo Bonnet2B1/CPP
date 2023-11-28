@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 18:31:20 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/11/19 00:50:54 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/28 15:23:33 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ Dog::~Dog() {
 	delete this->_brain;
 }
 
-Dog &Dog::operator = (const Dog &rhs) {
+Dog &Dog::operator = (const Dog &obj) {
 	std::cout << "Dog assignation operator called" << std::endl;
-	if (this != &rhs) {
-		this->_type = rhs._type;
-		this->_brain = new Brain(*rhs._brain);
+	if (this != &obj) {
+		this->_type = obj._type;
+		this->_brain = new Brain(*obj._brain);
 	}
 	return (*this);
 }

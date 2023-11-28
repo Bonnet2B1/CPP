@@ -13,9 +13,9 @@ WrongCat::~WrongCat() {
 	std::cout << "WrongCat destructor called" << std::endl;
 }
 
-WrongCat &WrongCat::operator = (const WrongCat &rhs) {
-	if (this != &rhs) {
-		this->type = rhs.type;
+WrongCat &WrongCat::operator = (const WrongCat &obj) {
+	if (this != &obj) {
+		this->type = obj.type;
 	}
 	return (*this);
 }

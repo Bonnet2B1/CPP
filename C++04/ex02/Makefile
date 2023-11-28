@@ -6,7 +6,7 @@
 #    By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/22 16:59:43 by edelarbr          #+#    #+#              #
-#    Updated: 2023/11/28 14:07:53 by edelarbr         ###   ########.fr        #
+#    Updated: 2023/11/28 15:58:37 by edelarbr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME		:= AbstractClass
 # ----------------------------------- Sources ----------------------------------
 
 SRCS		:=	main.cpp \
-				classes/Animal/Animal.cpp \
+				classes/AAnimal/AAnimal.cpp \
 				classes/Dog/Dog.cpp \
 				classes/Cat/Cat.cpp \
 				classes/Brain/Brain.cpp

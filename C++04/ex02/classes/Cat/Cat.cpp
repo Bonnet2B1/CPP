@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 18:31:11 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/31 16:05:47 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/28 15:23:33 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ Cat::~Cat() {
 	std::cout << "Cat destructor called" << std::endl;
 }
 
-Cat &Cat::operator = (const Cat &rhs) {
+Cat &Cat::operator = (const Cat &obj) {
 	std::cout << "Cat assignation operator called" << std::endl;
-	if (this != &rhs) {
-		this->_type = rhs._type;
-		*this->_brain = Brain(*rhs._brain);
+	if (this != &obj) {
+		this->_type = obj._type;
+		*this->_brain = Brain(*obj._brain);
 	}
 	return (*this);
 }

@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   AAnimal.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 18:31:50 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/31 16:27:15 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/28 15:58:02 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 
 AAnimal::AAnimal() {
 	std::cout << "Animal default constructor called" << std::endl;
@@ -27,11 +27,11 @@ AAnimal::~AAnimal() {
 	delete this->_brain;
 }
 
-AAnimal &AAnimal::operator = (const AAnimal &rhs) {
+AAnimal &AAnimal::operator = (const AAnimal &obj) {
 	std::cout << "Animal assignation operator called" << std::endl;
-	if (this != &rhs) {
-		this->_type = rhs._type;
-		*this->_brain = Brain(*rhs._brain);
+	if (this != &obj) {
+		this->_type = obj._type;
+		*this->_brain = Brain(*obj._brain);
 	}
 	return (*this);
 }

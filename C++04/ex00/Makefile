@@ -6,7 +6,7 @@
 #    By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/22 16:59:43 by edelarbr          #+#    #+#              #
-#    Updated: 2023/10/30 15:03:23 by edelarbr         ###   ########.fr        #
+#    Updated: 2023/11/28 14:59:45 by edelarbr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,11 +15,11 @@ NAME		:=	Polymorphism
 # ------------------------------ Sources -----------------------------
 
 SRCS		:=	main.cpp \
-				Animal.cpp \
-				Dog.cpp \
-				Cat.cpp \
-				WrongAnimal.cpp \
-				WrongCat.cpp
+				classes/Animal/Animal.cpp \
+				classes/Dog/Dog.cpp \
+				classes/Cat/Cat.cpp \
+				classes/WrongAnimal/WrongAnimal.cpp \
+				classes/WrongCat/WrongCat.cpp
 
 OBJ_DIR		:=	.objs
 OBJS		:=	$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))

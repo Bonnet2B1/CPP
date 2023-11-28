@@ -6,15 +6,18 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 14:43:08 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/11/28 14:01:17 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/28 16:02:17 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "classes/Animal/Animal.hpp"
+#include "classes/AAnimal/AAnimal.hpp"
 #include "classes/Cat/Cat.hpp"
 #include "classes/Dog/Dog.hpp"
 
 int main() {
+
+	// AAnimal animal;
+
 	AAnimal *animals[2];
 
 	for (int i = 0; i < 2; i++) {

@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 18:31:53 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/10/31 17:06:18 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/28 15:23:33 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ public:
 	AAnimal();
 	AAnimal(const AAnimal &src);
 	virtual ~AAnimal();
-	AAnimal &operator = (const AAnimal &rhs);
+	AAnimal &operator = (const AAnimal &obj);
 
 	std::string getType() const;
 

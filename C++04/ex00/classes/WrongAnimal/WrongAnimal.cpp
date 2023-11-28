@@ -12,9 +12,9 @@ WrongAnimal::~WrongAnimal() {
 	std::cout << "WrongAnimal destructor called" << std::endl;
 }
 
-WrongAnimal &WrongAnimal::operator = (const WrongAnimal &rhs) {
-	if (this != &rhs) {
-		this->type = rhs.type;
+WrongAnimal &WrongAnimal::operator = (const WrongAnimal &obj) {
+	if (this != &obj) {
+		this->type = obj.type;
 	}
 	return (*this);
 }

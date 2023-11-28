@@ -13,9 +13,9 @@ Cat::~Cat() {
 	std::cout << "Cat destructor called" << std::endl;
 }
 
-Cat &Cat::operator = (const Cat &rhs) {
-	if (this != &rhs) {
-		this->type = rhs.type;
+Cat &Cat::operator = (const Cat &obj) {
+	if (this != &obj) {
+		this->type = obj.type;
 	}
 	return (*this);
 }
