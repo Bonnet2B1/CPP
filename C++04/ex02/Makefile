@@ -6,26 +6,24 @@
 #    By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/22 16:59:43 by edelarbr          #+#    #+#              #
-#    Updated: 2023/10/31 16:00:21 by edelarbr         ###   ########.fr        #
+#    Updated: 2023/11/28 14:07:53 by edelarbr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		:= AbstractClass
 
-# ------------------------------ Sources -----------------------------
+# ----------------------------------- Sources ----------------------------------
 
 SRCS		:=	main.cpp \
 				classes/Animal/Animal.cpp \
 				classes/Dog/Dog.cpp \
 				classes/Cat/Cat.cpp \
-				classes/WrongAnimal/WrongAnimal.cpp \
-				classes/WrongCat/WrongCat.cpp \
-				classes/Brain/Brain.cpp \
+				classes/Brain/Brain.cpp
 
 OBJ_DIR		:=	.objs
 OBJS		:=	$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 
-# ------------------------------ Flags -------------------------------
+# ----------------------------------- Flags ------------------------------------
 
 CXX			:=	c++
 CXXFLAGS		:=	-Wall -Wextra -Werror -std=c++98 -g3 #-fsanitize=address
@@ -35,7 +33,7 @@ $(OBJ_DIR)/%.o :%.cpp
 	@ mkdir -p $(dir $@)
 	@ $(CXX) $(CXXFLAGS) $(INC_RL) -c $< -o $@
 
-# ------------------------------ Colors ------------------------------
+# ----------------------------------- Colors -----------------------------------
 
 CLR_RMV		:=	\033[0m
 RED			:=	\033[1;31m
@@ -44,7 +42,7 @@ YELLOW		:=	\033[1;33m
 BLUE		:=	\033[1;34m
 CYAN 		:=	\033[1;36m
 
-# ------------------------------ Compilation -------------------------
+# ----------------------------------- Compilation ------------------------------
 
 all:			$(NAME)
 
@@ -55,7 +53,7 @@ $(NAME):		$(OBJS)
 
 
 
-# -------------------------------- Rules -----------------------------
+# ------------------------------------- Rules ----------------------------------
 
 clean:
 				@ $(RM) $(OBJ_DIR)
