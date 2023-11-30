@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 16:42:21 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/11/30 02:55:50 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/30 20:15:51 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,6 @@ int main() {
 
 	return 0;
 }
-
-
-
-
 
 
 
@@ -92,38 +88,44 @@ int main() {
 // 	delete copyMe;
 // 	delete src;
 
+
 // 	// Create a MateriaSource and learn Ice and Cure Materias
-// 	src = new MateriaSource();
-// 	src->learnMateria(new Ice());
-// 	src->learnMateria(new Cure());
+// 	MateriaSource* src2 = new MateriaSource();
+// 	src2->learnMateria(new Ice());
+// 	src2->learnMateria(new Cure());
 
 // 	// Test createMateria with valid and invalid types
-// 	tmp = src->createMateria("ice");
-// 	if (tmp == 0 || tmp->getType() != "ice")
+// 	AMateria* tmp2;
+// 	tmp2 = src2->createMateria("ice");
+// 	if (tmp2 == 0 || tmp2->getType() != "ice")
 // 		std::cout << "createMateria failed for type 'ice'" << std::endl;
-// 	tmp = src->createMateria("fire");
-// 	if (tmp != 0)
+// 	delete tmp2;
+// 	tmp2 = src2->createMateria("fire");
+// 	if (tmp2 != 0)
 // 		std::cout << "createMateria did not return null for invalid type 'fire'" << std::endl;
+// 	delete tmp2;
 
 // 	// Test learnMateria with null
-// 	src->learnMateria(0); // Should not do anything
+// 	src2->learnMateria(0); // Should not do anything
 
 // 	// Test copy constructor
-// 	MateriaSource* copySrc = new MateriaSource(*src);
-// 	tmp = copySrc->createMateria("ice");
-// 	if (tmp == 0 || tmp->getType() != "ice")
+// 	MateriaSource* copySrc2 = new MateriaSource(*src2);
+// 	tmp2 = copySrc2->createMateria("ice");
+// 	if (tmp2 == 0 || tmp2->getType() != "ice")
 // 		std::cout << "copy constructor failed for type 'ice'" << std::endl;
+// 	delete tmp2;
 
 // 	// Test assignment operator
-// 	MateriaSource assignSrc;
-// 	assignSrc = *src;
-// 	tmp = assignSrc.createMateria("ice");
-// 	if (tmp == 0 || tmp->getType() != "ice")
+// 	MateriaSource assignSrc2;
+// 	assignSrc2 = *src2;
+// 	tmp2 = assignSrc2.createMateria("ice");
+// 	if (tmp2 == 0 || tmp2->getType() != "ice")
 // 		std::cout << "assignment operator failed for type 'ice'" << std::endl;
 
 // 	// Clean up
-// 	delete src;
-// 	delete copySrc;
+// 	delete src2;
+// 	delete copySrc2;
+// 	delete tmp2;
 
 // 	return 0;
 // }

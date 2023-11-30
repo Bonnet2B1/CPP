@@ -6,7 +6,7 @@
 #    By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/22 16:59:43 by edelarbr          #+#    #+#              #
-#    Updated: 2023/11/30 01:35:47 by edelarbr         ###   ########.fr        #
+#    Updated: 2023/11/30 20:16:29 by edelarbr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ OBJS		:=	$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 # ----------------------------------- Flags ------------------------------------
 
 CXX			:=	c++
-CXXFLAGS := -Wall -Wextra -Werror -std=c++98 -g3 -fsanitize=address
+CXXFLAGS := -Wall -Wextra -Werror -std=c++98 -g3 #-fsanitize=address
 RM			:=	rm -rf
 
 $(OBJ_DIR)/%.o :%.cpp

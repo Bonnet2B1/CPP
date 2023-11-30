@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 21:10:45 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/11/30 02:53:17 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/30 18:55:43 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ void MateriaSource::learnMateria(AMateria *m) {
 		_memory[idx - 1] = 0;
 	}
 	_memory[0] = m->clone();
+	delete m;
 	// std::cout << "Materia " << m->getType() << " learned" << std::endl;
 }
 

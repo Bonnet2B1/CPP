@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/29 21:10:53 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/11/30 00:59:22 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/30 20:11:18 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class MateriaSource : public IMateriaSource {
 public:
 	MateriaSource();
 	MateriaSource(const MateriaSource &src);
-	virtual ~MateriaSource();
+	~MateriaSource();
 	MateriaSource &operator = (const MateriaSource &rhs);
 
 	void learnMateria(AMateria *m);
