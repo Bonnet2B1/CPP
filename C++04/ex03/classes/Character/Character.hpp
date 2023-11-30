@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 18:10:42 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/11/28 18:13:28 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/29 20:53:04 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,25 @@
 # define CHARACTER_HPP
 
 # include <iostream>
-# include "AMateria.hpp"
+# include "../ICharacter/ICharacter.hpp"
 
-class Character {
+class Character : public ICharacter{
 
 public:
-	Character();
+	Character(std::string name);
 	Character(const Character &src);
-	virtual ~Character();
+	~Character();
 	Character &operator = (const Character &rhs);
 
+	std::string const &getName() const;
+	void equip(AMateria *m);
+	void unequip(int idx);
+	void use(int idx, ICharacter &target);
+
 private:
+	std::string _name;
+	AMateria *_inventorySlot[4];
+
 };
 
 #endif // CHARACTER_HPP

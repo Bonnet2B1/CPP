@@ -6,13 +6,17 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/28 17:05:04 by edelarbr          #+#    #+#             */
-/*   Updated: 2023/11/28 17:05:06 by edelarbr         ###   ########.fr       */
+/*   Updated: 2023/11/30 02:29:42 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "../Character/Character.hpp"
+#include "../AMateria/AMateria.hpp"
 #include "Ice.hpp"
 
-Ice::Ice() {}
+Ice::Ice() {
+	this->_type = "ice";
+}
 
 Ice::Ice(const Ice &src) {
 	*this = src;
@@ -20,9 +24,13 @@ Ice::Ice(const Ice &src) {
 
 Ice::~Ice() {}
 
-Ice &Ice::operator = (const Ice &rhs) {
+Ice &Ice::operator=(const Ice &rhs) {
 	if (this != &rhs) {
-		// - Copy all attributes here
+		this->_type = rhs._type;
 	}
-	return (*this);
+	return *this;
+}
+
+Ice *Ice::clone() const {
+	return (new Ice(*this));
 }
