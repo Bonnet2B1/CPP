@@ -3,6 +3,8 @@
 
 # include <iostream>
 
+class Bureaucrat;
+
 class Form {
 
 public:
@@ -14,31 +16,34 @@ public:
 
 	const std::string	getName() const;
 	bool				getSignStatus() const;
-	const int			getSignGrade() const;
-	const int			getExecGrade() const;
+	int					getSignGrade() const;
+	int					getExecGrade() const;
+	void				setSignStatus(bool status);
+
+	void				beSigned(Bureaucrat &b);
 
 	class GradeTooLowException : public std::exception {
 
 		public:
-			GradeTooLowException(const std::string error);
+			GradeTooLowException(const char* error);
 
 			virtual const char* what() const throw() {
-				return (this->_error.c_str());
+				return (this->_error);
 			}
 		private:
-			const std::string	_error;
+			const char*	_error;
 	};
 
 	class GradeTooHighException : public std::exception {
 
 		public:
-			GradeTooHighException(const std::string error);
+			GradeTooHighException(const char* error);
 
 			virtual const char* what() const throw() {
-				return (this->_error.c_str());
+				return (this->_error);
 			}
 		private:
-			const std::string	_error;
+			const char*	_error;
 	};
 
 private:

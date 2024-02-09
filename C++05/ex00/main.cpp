@@ -14,28 +14,30 @@
 
 int main() {
 
-	Bureaucrat B1("Charles");
-
-	try
-	{
-		B1.DecreaseGrade();
+	try {
+		Bureaucrat b("Charles", 151);
 	}
-	catch (std::exception & e)
-	{
+	catch (std::exception & e) {
 		std::cerr << e.what() << std::endl;
 	}
-	std::cout << B1 << std::endl;
 
-	for (int i = 0; i != 150; i++)
-	{
-		try
-		{
-			B1.IncreaseGrade();
+
+	Bureaucrat b("Charles", 150);
+	try {
+		b.DecreaseGrade();
+	}
+	catch (std::exception & e) {
+		std::cerr << e.what() << std::endl;
+	}
+	std::cout << b << std::endl;
+
+	for (int i = 0; i != 150; i++) {
+		try {
+			b.IncreaseGrade();
 		}
-		catch (std::exception & e)
-		{
+		catch (std::exception & e) {
 			std::cerr << e.what() << std::endl;
 		}
 	}
-	std::cout << B1 << std::endl;
+	std::cout << b << std::endl;
 }

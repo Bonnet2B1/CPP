@@ -10,35 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
 #include "Form.hpp"
+#include "Bureaucrat.hpp"
 
 int main() {
 
-	Bureaucrat B1("Charles");
-	Form F1("Bite", 2, 2);
-	// Form F2();
+	Bureaucrat b("Charles", 50);
+	std::cout << b << std::endl;
 
-	try
-	{
-		B1.DecreaseGrade();
-	}
-	catch (std::exception & e)
-	{
-		std::cerr << e.what() << std::endl;
-	}
-	std::cout << B1 << std::endl;
+	Form f1("promotion", 30, 30);
+	std::cout << f1 << std::endl;
 
-	for (int i = 0; i != 150; i++)
-	{
-		try
-		{
-			B1.IncreaseGrade();
-		}
-		catch (std::exception & e)
-		{
-			std::cerr << e.what() << std::endl;
-		}
-	}
-	std::cout << B1 << std::endl;
+	b.signForm(f1);
+
+	Form f2("resignation", 70, 70);
+	std::cout << f2 << std::endl;
+
+	b.signForm(f2);
 }

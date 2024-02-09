@@ -11,22 +11,26 @@
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
-Bureaucrat::Bureaucrat() {}
-
-Bureaucrat::Bureaucrat(const std::string name) : _name(name) {
+Bureaucrat::Bureaucrat() {
 	this->_grade = 150;
 }
 
-Bureaucrat::Bureaucrat(const Bureaucrat &src) {
-	*this = src;
+Bureaucrat::Bureaucrat(const std::string name, int grade) : _name(name) {
+	if (grade > 150)
+		throw GradeTooLowException("The can't be less than 150");
+	else if (grade < 1)
+		throw GradeTooHighException("The grade can't be more than 1");
+	else
+		this->_grade = grade;
 }
 
 Bureaucrat::~Bureaucrat() {}
 
 Bureaucrat &Bureaucrat::operator = (const Bureaucrat &rhs) {
 	if (this != &rhs) {
-		*this = Bureaucrat(rhs.getName());
+		*this = Bureaucrat(rhs._name, rhs._grade);
 		this->_grade = rhs._grade;
 	}
 	return (*this);
@@ -37,22 +41,32 @@ const std::string	Bureaucrat::getName() const {return _name;}
 int	Bureaucrat::getGrade() const {return _grade;}
 
 void	Bureaucrat::DecreaseGrade() {
-	if (this->_grade + 1 <= 150)
-		this->_grade++;
+	if (this->_grade + 1 > 150)
+		throw GradeTooLowException("The can't be less than 150");
 	else
-		throw GradeTooHighException("The can't be less than 150");
+		this->_grade++;
 }
 
 void	Bureaucrat::IncreaseGrade() {
-	if (this->_grade - 1 >= 1)
-		this->_grade--;
+	if (this->_grade - 1 < 1)
+		throw GradeTooHighException("The grade can't be more than 1");
 	else
-		throw GradeTooLowException("The grade can't be more than 1");
+		this->_grade--;
 }
 
-Bureaucrat::GradeTooHighException::GradeTooHighException(const std::string error) : _error(error) {}
+void	Bureaucrat::signForm(Form &f) {
+	try {
+		f.beSigned(*this);
+		std::cout << this->getName() << " signed " << f.getName() << std::endl;
+	}
+	catch (std::exception & e) {
+		std::cout << this->_name << " couldn't sign " << f.getName() << " because " << e.what() << std::endl;
+	}
+}
 
-Bureaucrat::GradeTooLowException::GradeTooLowException(const std::string error) : _error(error) {}
+Bureaucrat::GradeTooHighException::GradeTooHighException(const char* error) : _error(error) {}
+
+Bureaucrat::GradeTooLowException::GradeTooLowException(const char* error) : _error(error) {}
 
 std::ostream &operator << (std::ostream &out, const Bureaucrat &rhs)
 {
