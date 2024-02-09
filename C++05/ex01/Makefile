@@ -16,6 +16,7 @@ NAME		:=	Maggots
 
 SRCS		:=	main.cpp \
 				Bureaucrat.cpp \
+				Form.cpp \
 
 OBJ_DIR		:=	.objs
 OBJS		:=	$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))

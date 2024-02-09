@@ -11,10 +11,13 @@
 /* ************************************************************************** */
 
 #include "Bureaucrat.hpp"
+#include "Form.hpp"
 
 int main() {
 
 	Bureaucrat B1("Charles");
+	Form F1("Bite", 2, 2);
+	// Form F2();
 
 	try
 	{

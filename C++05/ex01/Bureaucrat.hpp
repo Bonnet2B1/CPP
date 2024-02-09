@@ -18,6 +18,7 @@
 class Bureaucrat {
 
 public:
+	Bureaucrat();
 	Bureaucrat(const std::string name);
 	Bureaucrat(const Bureaucrat &src);
 	virtual ~Bureaucrat();
@@ -33,28 +34,28 @@ public:
 	class GradeTooHighException : public std::exception {
 
 	public:
-		GradeTooHighException(const char* error);
+		GradeTooHighException(const std::string error);
 
 		virtual const char* what() const throw() {
-			return (this->_error);
+			return (this->_error.c_str());
 		}
 
 	private:
-		const char*	_error;
+		const std::string	_error;
 
 	};
 
 	class GradeTooLowException : public std::exception {
 
 	public:
-		GradeTooLowException(const char* error);
+		GradeTooLowException(const std::string error);
 
 		virtual const char* what() const throw() {
-			return (this->_error);
+			return (this->_error.c_str());
 		}
 
 	private:
-		const char*	_error;
+		const std::string	_error;
 
 	};
 
