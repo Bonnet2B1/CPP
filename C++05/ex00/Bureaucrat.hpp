@@ -24,40 +24,45 @@ public:
 	virtual ~Bureaucrat();
 	Bureaucrat &operator = (const Bureaucrat &rhs);
 
-	const std::string getName() const;
-	int getGrade() const;
+	const std::string	getName() const;
+	int					getGrade() const;
 
-	void IncreaseGrade();
-	void DecreaseGrade();
+	void				IncreaseGrade();
+	void				DecreaseGrade();
 
 
 	class GradeTooHighException : public std::exception {
 
 	public:
-		GradeTooHighException(const char* error);
+		GradeTooHighException(const std::string error);
+
 		virtual const char* what() const throw() {
-			return (this->_error);
+			return (this->_error.c_str());
 		}
 
 	private:
-		const char*	_error;
+		const std::string	_error;
+
 	};
 
 	class GradeTooLowException : public std::exception {
 
 	public:
-		GradeTooLowException(const char* error);
+		GradeTooLowException(const std::string error);
+
 		virtual const char* what() const throw() {
-			return (this->_error);
+			return (this->_error.c_str());
 		}
 
 	private:
-		const char*	_error;
+		const std::string	_error;
+
 	};
 
 private:
 	const std::string	_name;
 	int					_grade;
+
 };
 
 std::ostream &operator << (std::ostream &out, const Bureaucrat &rhs);
