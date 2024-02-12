@@ -18,34 +18,36 @@
 
 int main(void)
 {
-	// Bureaucrat bureau_1("michel", 1500);
-	// Bureaucrat bureau_1("michel", 0);
-	Bureaucrat bureau_1("michel", 45);
-	Bureaucrat bureau_2("Karen", 3);
-	AForm *form_1 = new RobotomyRequestForm("Random pig");
-	AForm *form_2 = new PresidentialPardonForm("Moi");
-	AForm *form_3 = new ShrubberyCreationForm("Hein");
+	Bureaucrat b0("ultra nullos", 50);
+	Bureaucrat b1("nullos", 50);
+	Bureaucrat b2("boss", 1);
+	AForm *robotomy = new RobotomyRequestForm("Random pig");
+	AForm *presidential = new PresidentialPardonForm("Moi");
+	AForm *shruberry = new ShrubberyCreationForm("Hein");
 
-	std::cout << bureau_1 << std::endl;
-	std::cout << bureau_2 << std::endl;
+	b0.signForm(*robotomy);
+	b0.executeForm(*robotomy);
+	std::cout << std::endl;
 
-	form_1->beSigned(bureau_1);
-	form_1->beSigned(bureau_1);
-	bureau_1.signForm(*form_1);
-	bureau_1.signForm(*form_1);
-	bureau_1.executeForm(*form_1);
+	b1.signForm(*robotomy);
+	b1.executeForm(*robotomy);
+	std::cout << std::endl;
 
-	form_2->beSigned(bureau_1);
-	form_2->execute(bureau_1);
-	bureau_2.signForm(*form_2);
-	form_2->execute(bureau_2);
+	b2.signForm(*robotomy);
+	b2.executeForm(*robotomy);
+	std::cout << std::endl;
 
-	bureau_2.signForm(*form_3);
-	form_3->execute(bureau_2);
+	b2.signForm(*presidential);
+	b2.executeForm(*presidential);
+	std::cout << std::endl;
 
-	delete form_1;
-	delete form_2;
-	delete form_3;
+	b2.signForm(*shruberry);
+	b2.executeForm(*shruberry);
+	std::cout << std::endl;
+
+	delete robotomy;
+	delete presidential;
+	delete shruberry;
 
 	return (0);
 }

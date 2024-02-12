@@ -14,7 +14,6 @@
 #include "../AForm/AForm.hpp"
 
 Bureaucrat::Bureaucrat() {
-	// - mettre des valeurs par défaut ici et dans les autres classes et les autres exos
 	this->_grade = 150;
 }
 
