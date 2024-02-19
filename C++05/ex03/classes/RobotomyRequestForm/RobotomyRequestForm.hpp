@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   RobotomyRequestForm.hpp                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edelarbr <edelarbr@student.42mulhouse.fr>  +#+  +:+       +#+        */
+/*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 17:29:49 by edelarbr          #+#    #+#             */
-/*   Updated: 2024/02/19 17:29:50 by edelarbr         ###   ########.fr       */
+/*   Updated: 2024/02/19 19:17:47 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <iostream>
 # include "../AForm/AForm.hpp"
+# include "time.h"
+# include "stdlib.h"
 
 class Bureaucrat;
 

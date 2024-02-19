@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edelarbr <edelarbr@student.42mulhouse.fr>  +#+  +:+       +#+        */
+/*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 17:29:33 by edelarbr          #+#    #+#             */
-/*   Updated: 2024/02/19 17:29:34 by edelarbr         ###   ########.fr       */
+/*   Updated: 2024/02/19 19:19:11 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ Intern &Intern::operator = (const Intern &rhs) {
 AForm	*Intern::makeForm(std::string formName, std::string target) {
 	std::string formNameList[3] = {"shrubbery creation", "robotomy request", "presidential pardon"};
 	AForm* formList[3] = { new ShrubberyCreationForm(target), new RobotomyRequestForm(target), new PresidentialPardonForm(target) };
-	AForm* ret = nullptr;
+	AForm* ret = 0;
 	for (int i = 0; i < 3; i++) {
 	if (formNameList[i] == formName)
 			ret = formList[i];

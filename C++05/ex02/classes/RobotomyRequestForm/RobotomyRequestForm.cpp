@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 17:29:09 by edelarbr          #+#    #+#             */
-/*   Updated: 2024/02/19 17:22:55 by edelarbr         ###   ########.fr       */
+/*   Updated: 2024/02/19 19:15:14 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ RobotomyRequestForm &RobotomyRequestForm::operator = (const RobotomyRequestForm 
 void RobotomyRequestForm::execute(Bureaucrat const & executor) const {
 	if (executor.getGrade() > this->getExecGrade())
 		throw AForm::GradeTooLowException("Bureaucrat's grade is too low to execute the form");
-	std::srand(std::time(0));
+	std::srand(time(0));
 	if (std::rand() % 2)
 		std::cout << "** Drilling noises **" << std::endl << this->_target << " has been robotomized successfully" << std::endl;
 	else
