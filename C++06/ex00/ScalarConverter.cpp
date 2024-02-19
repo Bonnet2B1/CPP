@@ -110,7 +110,6 @@ void convertDouble(double n) {
 
 void	ScalarConverter::convert(std::string toConvert) {
 	std::string type = parsing(&toConvert);
-	std::cout << type << std::endl;
 	if (type == "char")
 		return convertChar((char)toConvert[0]);
 	else if (type == "int")
