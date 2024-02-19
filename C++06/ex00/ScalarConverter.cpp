@@ -83,12 +83,12 @@ void convertFloat(float n) {
 		std::cout << "double: " << (double)n << ".0" << std::endl;
 	}
 	else {
-		std::cout << "float: " << n << "f" << std::endl;
-		std::cout << "double: " << (double)n << std::endl;
+		std::cout << std::fixed << std::setprecision(50) << "float: " << n << "f" << std::endl;
+		std::cout << std::fixed << std::setprecision(50) << "double: " << (double)n << std::endl;
 	}
 }
 
-void convertDouble(double n) { // ! ./Convert 123.245332424342535435324545
+void convertDouble(double n) {
 	if ((int)n >= 0 && (int)n <= 127) {
 		if ((int)n >= 32 && (int)n <= 126)
 			std::cout << "char: '" << (char)((int)n) << "\'" << std::endl;
@@ -103,8 +103,8 @@ void convertDouble(double n) { // ! ./Convert 123.245332424342535435324545
 		std::cout << "double: " << n << ".0" << std::endl;
 	}
 	else {
-		std::cout << "float: " << (float)n << "f" << std::endl;
-		std::cout << "double: " << n << std::endl;
+		std::cout << std::fixed << std::setprecision(50) << "float: " << (float)n << "f" << std::endl;
+		std::cout << std::fixed << std::setprecision(50) << "double: " << n << std::endl;
 	}
 }
 
@@ -118,7 +118,7 @@ void	ScalarConverter::convert(std::string toConvert) {
 	else if (type == "float")
 		convertFloat(atof(toConvert.c_str()));
 	else if (type == "double")
-		convertDouble(std::stod(toConvert));
+		convertDouble(atof(toConvert.c_str()));
 	else
 		std::cout << type << std::endl;
 }
