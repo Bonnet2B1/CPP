@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 17:27:01 by edelarbr          #+#    #+#             */
-/*   Updated: 2024/02/19 17:27:02 by edelarbr         ###   ########.fr       */
+/*   Updated: 2024/02/26 20:16:40 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ std::string	parsing(std::string *toConvert) {
 			i++;
 		if (toConvert[0][i] == '\0')
 			return "int";
-		if (toConvert[0][i] == '.' && toConvert[0][i + 1]) {
+		if (toConvert[0][i] == '.' && isnumber(toConvert[0][i + 1])) {
 			i++;
 			while (i < toConvert->length() && isnumber(toConvert[0][i]))
 				i++;
