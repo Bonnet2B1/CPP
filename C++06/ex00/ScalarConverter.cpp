@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 17:27:01 by edelarbr          #+#    #+#             */
-/*   Updated: 2024/02/26 20:16:40 by edelarbr         ###   ########.fr       */
+/*   Updated: 2024/02/26 20:22:17 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,12 @@ ScalarConverter &ScalarConverter::operator = (const ScalarConverter &rhs) {
 		// - Copy all attributes here
 	}
 	return (*this);
+}
+
+double	isnumber(char c) {
+	if (c >= '0' && c <= '9')
+		return 1;
+	return 0;
 }
 
 std::string	parsing(std::string *toConvert) {
