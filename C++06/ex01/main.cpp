@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 17:27:21 by edelarbr          #+#    #+#             */
-/*   Updated: 2024/02/19 17:27:22 by edelarbr         ###   ########.fr       */
+/*   Updated: 2024/02/26 20:32:42 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 int main() {
 	Data*		ptr = new Data;
-	uintptr_t	serialized = 0;
+	__intptr_t	serialized = 0;
 
 	ptr->proof = "Hehehehe";
 
@@ -24,7 +24,7 @@ int main() {
 	std::cout << "serialization" << std::endl;
 
 	std::cout << "ptr: " << ptr << std::endl;
-	ptr = nullptr;
+	ptr = NULL;
 	std::cout << "ptr: " << ptr << std::endl;
 
 	ptr = Serializer::deserialize(serialized);
