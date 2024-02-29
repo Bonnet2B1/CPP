@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScalarConverter.cpp                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edelarbr <edelarbr@student.42mulhouse.fr>  +#+  +:+       +#+        */
+/*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 17:27:01 by edelarbr          #+#    #+#             */
-/*   Updated: 2024/02/26 20:22:17 by edelarbr         ###   ########.fr       */
+/*   Updated: 2024/02/29 16:00:19 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,7 @@ ScalarConverter::ScalarConverter(const ScalarConverter &src) {
 ScalarConverter::~ScalarConverter() {}
 
 ScalarConverter &ScalarConverter::operator = (const ScalarConverter &rhs) {
-	if (this != &rhs) {
-		// - Copy all attributes here
-	}
+	(void)rhs;
 	return (*this);
 }
 
