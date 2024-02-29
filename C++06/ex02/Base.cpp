@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 17:27:38 by edelarbr          #+#    #+#             */
-/*   Updated: 2024/02/26 20:40:06 by edelarbr         ###   ########.fr       */
+/*   Updated: 2024/02/29 16:20:13 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,3 +30,40 @@ Base* generate(void) {
 		return new C();
 }
 
+void	Base::identify(Base *p)
+{
+	if (dynamic_cast<A *>(p))
+		std::cout << "Class is a type A, checked by ptr" << std::endl;
+	else if (dynamic_cast<B *>(p))
+		std::cout << "Class is a type B, checked by ptr" << std::endl;
+	else if (dynamic_cast<C *>(p))
+		std::cout << "Class is a type C, checked by ptr" << std::endl;
+	else
+		std::cout << "Error unrecognized class !" << std::endl;
+}
+
+void	Base::identify(Base &p)
+{
+	try
+	{
+		A &r = dynamic_cast<A &>(p);
+		(void)r;
+		std::cout << "Class is a type A, checked by ref" << std::endl;
+	}
+	catch (std::exception &e) {}
+	try
+	{
+		B &r = dynamic_cast<B &>(p);
+		(void)r;
+		std::cout << "Class is a type B, checked by ref" << std::endl;
+	}
+	catch (std::exception &e) {}
+	try
+	{
+		C &r = dynamic_cast<C &>(p);
+		(void)r;
+		std::cout << "Class is a type C, checked by ref" << std::endl;
+	}
+	catch (std::exception &e) {}
+	return ;
+}

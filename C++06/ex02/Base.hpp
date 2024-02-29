@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 17:27:48 by edelarbr          #+#    #+#             */
-/*   Updated: 2024/02/19 17:27:49 by edelarbr         ###   ########.fr       */
+/*   Updated: 2024/02/29 15:47:57 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,11 @@
 class Base {
 
 public:
-	virtual ~Base();
-	virtual void identify() const = 0;
+	virtual	~Base();
+	void	identify(Base* p);
+	void	identify(Base& p);
 
 };
 
-Base*	generate(void);
+Base*		generate(void);
 #endif // BASE_HPP
