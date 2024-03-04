@@ -27,11 +27,10 @@ int main() {
 	ptr = NULL;
 	std::cout << "ptr: " << ptr << std::endl;
 
-	ptr = Serializer::deserialize(serialize`d);
+	ptr = Serializer::deserialize(serialized);
 	std::cout << "deserialization" << std::endl;
 	std::cout << "ptr->proof: " << ptr->proof << std::endl;
 
 
 	return 0;
 }
-``
