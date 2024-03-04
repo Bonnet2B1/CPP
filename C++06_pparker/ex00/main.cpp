@@ -5,33 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: edelarbr <edelarbr@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/19 17:27:21 by edelarbr          #+#    #+#             */
-/*   Updated: 2024/03/04 14:07:18 by edelarbr         ###   ########.fr       */
+/*   Created: 2024/02/27 17:19:25 by edelarbr          #+#    #+#             */
+/*   Updated: 2024/02/27 18:12:12 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Serializer.hpp"
-#include "Data.h"
+#include "whatever.hpp"
+#include <iostream>
 
-int main() {
-	Data*		ptr = new Data;
-	__intptr_t	serialized = 0;
+int	main() {
+	int a = 2;
+	int b = 3;
 
-	ptr->proof = "Hehehehe";
+	::swap( a, b );
+	std::cout << "a = " << a << ", b = " << b << std::endl;
+	std::cout << "min( a, b ) = " << ::min( a, b ) << std::endl;
+	std::cout << "max( a, b ) = " << ::max( a, b ) << std::endl;
 
-	std::cout << "ptr->proof: " << ptr->proof << std::endl;
-	serialized = Serializer::serialize(ptr);
-	std::cout << "serialization" << std::endl;
+	std::string c = "chaine1";
+	std::string d = "chaine2";
 
-	std::cout << "ptr: " << ptr << std::endl;
-	ptr = NULL;
-	std::cout << "ptr: " << ptr << std::endl;
-
-	ptr = Serializer::deserialize(serialize`d);
-	std::cout << "deserialization" << std::endl;
-	std::cout << "ptr->proof: " << ptr->proof << std::endl;
-
-
-	return 0;
+	::swap(c, d);
+	std::cout << "c = " << c << ", d = " << d << std::endl;
+	std::cout << "min( c, d ) = " << ::min(c, d) << std::endl;
+	std::cout << "max( c, d ) = " << ::max(c, d) << std::endl;
 }
-``
