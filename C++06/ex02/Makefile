@@ -16,9 +16,6 @@ NAME		:=	typeinfo
 
 SRCS		:=	main.cpp \
 				Base.cpp \
-				A.cpp \
-				B.cpp \
-				C.cpp \
 
 OBJ_DIR		:=	.objs
 OBJS		:=	$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))

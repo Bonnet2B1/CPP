@@ -11,14 +11,14 @@
 /* ************************************************************************** */
 
 #include "Base.hpp"
-#include "A.hpp"
-#include "B.hpp"
-#include "C.hpp"
 
 int main() {
-	Base* b;
 
-	b = generate();
-	b->identify();
-	delete b;
+	Base *ptr = generate();
+	Base &ref = *ptr;
+
+	ptr->identify(ptr);
+	ptr->identify(ref);
+
+	delete ptr;
 }
