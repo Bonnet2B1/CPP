@@ -27,8 +27,7 @@ Base*	generate(void) {
 		return new C();
 }
 
-void	identify(Base *p)
-{
+void	identify(Base *p) {
 	if (dynamic_cast<A *>(p))
 		std::cout << "Class is a type A, checked by ptr" << std::endl;
 	else if (dynamic_cast<B *>(p))
@@ -39,24 +38,20 @@ void	identify(Base *p)
 		std::cout << "Error unrecognized class !" << std::endl;
 }
 
-void	identify(Base &p)
-{
-	try
-	{
+void	identify(Base &p) {
+	try {
 		A &r = dynamic_cast<A &>(p);
 		(void)r;
 		std::cout << "Class is a type A, checked by ref" << std::endl;
 	}
 	catch (std::exception &e) {}
-	try
-	{
+	try {
 		B &r = dynamic_cast<B &>(p);
 		(void)r;
 		std::cout << "Class is a type B, checked by ref" << std::endl;
 	}
 	catch (std::exception &e) {}
-	try
-	{
+	try {
 		C &r = dynamic_cast<C &>(p);
 		(void)r;
 		std::cout << "Class is a type C, checked by ref" << std::endl;
