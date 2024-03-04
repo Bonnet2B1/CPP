@@ -19,15 +19,14 @@ class Base {
 
 public:
 	virtual	~Base();
-	void	identify(Base* p);
-	void	identify(Base& p);
-	
 };
 
 class A : public Base {};
 class B : public Base {};
 class C : public Base {};
 
-Base*		generate(void);
+void	identify(Base* p);
+void	identify(Base& p);
+Base*	generate(void);
 
 #endif // BASE_HPP

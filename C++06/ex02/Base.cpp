@@ -16,7 +16,7 @@
 
 Base::~Base() {}
 
-Base* generate(void) {
+Base*	generate(void) {
 	std::srand(time(0));
 	int rdm = std::rand() % 3;
 	if (rdm == 0)
@@ -27,7 +27,7 @@ Base* generate(void) {
 		return new C();
 }
 
-void	Base::identify(Base *p)
+void	identify(Base *p)
 {
 	if (dynamic_cast<A *>(p))
 		std::cout << "Class is a type A, checked by ptr" << std::endl;
@@ -39,7 +39,7 @@ void	Base::identify(Base *p)
 		std::cout << "Error unrecognized class !" << std::endl;
 }
 
-void	Base::identify(Base &p)
+void	identify(Base &p)
 {
 	try
 	{

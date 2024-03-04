@@ -17,8 +17,8 @@ int main() {
 	Base *ptr = generate();
 	Base &ref = *ptr;
 
-	ptr->identify(ptr);
-	ptr->identify(ref);
+	identify(ptr);
+	identify(ref);
 
 	delete ptr;
 }
