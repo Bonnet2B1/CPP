@@ -10,19 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "iter.hpp"
 #include <iostream>
-
-void	ftToupper(char &c) {
-	if (c >= 'a' && c <= 'z')
-		c -= 32;
-}
+#include "iter.hpp"
 
 int	main() {
 	char str[] = "Basic phrase";
 	std::cout << "str = " << str << std::endl;
 	std::cout << "iter..." << std::endl;
-	::iter(str, 7, ftToupper);
+	iter(str, 7, ftPlusOne<char>);
 	std::cout << "str = " << str << std::endl;
 
 	std::cout << std::endl;
@@ -33,7 +28,7 @@ int	main() {
 		std::cout << intTab[i] << " ";
 	std::cout << std::endl;
 	std::cout << "iter..." << std::endl;
-	::iter(intTab, 3, ::ftPlusOne);
+	iter(intTab, 3, ftPlusOne<int>);
 	std::cout << "intTab = ";
 	for (int i = 0; i < 5; i++)
 		std::cout << intTab[i] << " ";
@@ -47,7 +42,7 @@ int	main() {
 		std::cout << doubleTab[i] << " ";
 	std::cout << std::endl;
 	std::cout << "iter..." << std::endl;
-	::iter(doubleTab, 3, ::ftPlusOne);
+	iter(doubleTab, 3, ftPlusOne<double>);
 	std::cout << "doubleTab = ";
 	for (int i = 0; i < 5; i++)
 		std::cout << doubleTab[i] << " ";

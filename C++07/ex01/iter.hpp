@@ -14,7 +14,18 @@
 # define ITER_HPP
 
 template <typename T>
+void	iter(T *array, int length, void (*function)(const T&)) {
+	if (array == NULL || length <= 0 || function == NULL)
+		return;
+	for (int i = 0; i < length; i++) {
+		function(array[i]);
+	}
+}
+
+template <typename T>
 void	iter(T *array, int length, void (*function)(T&)) {
+	if (array == NULL || length <= 0 || function == NULL)
+		return;
 	for (int i = 0; i < length; i++) {
 		function(array[i]);
 	}

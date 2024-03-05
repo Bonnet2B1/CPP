@@ -47,5 +47,13 @@ int main() {
 	catch (std::exception &e) {
 		std::cout << e.what() << std::endl;
 	}
+
+	// === Pparker tests ===
+	Array<int> haha(5);
+	Array<int> test(haha);
+
+	test = haha;
+
+	std::cout << haha[0] << std::endl;
 	return (0);
 }

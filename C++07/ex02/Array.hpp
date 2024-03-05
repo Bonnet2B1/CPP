@@ -21,30 +21,45 @@ class Array {
 
 public:
 	Array<T>() : _size(0) {
-		_array = new T[0];
-	};
+		_array = new T[0]();
+	}
+
+	Array<T>(unsigned int n) : _size(n) {
+		_array = new T[n]();
+	}
+
+	Array<T>(const Array<T> &src) {
+		_array = NULL;
+		*this = src;
+	}
+
 	~Array<T>() {
 		delete [] _array;
-	};
-	Array<T>(unsigned int n) : _size(n) {
-		_array = new T[n];
-	};
-	Array<T>(const Array<T> &src) {
-		*this = src;
-	};
-	Array<T> &operator=(const Array<T> &rhs) {
+	}
+
+	Array<T> &operator = (const Array<T> &rhs) {
 		_size = rhs._size;
-		_array = new T[size()];
+		if (_array != NULL)
+			delete [] _array;
+		_array = new T[size()]();
 		for (int i = 0; i < size() ; i++)
 			this->_array[i] = rhs._array[i];
 		return (*this);
-	};
-	T &operator[](int index) {
+	}
+
+	T &operator [] (int index) {
 		if (index >= size() || index < 0)
 			throw OutOfBound();
 		return (_array[index]);
 	}
-	int	size() {
+
+	const T &operator [] (int index) const {
+		if (index >= size() || index < 0)
+			throw OutOfBound();
+		return (_array[index]);
+	}
+
+	int	size() const {
 		return (_size);
 	}
 
