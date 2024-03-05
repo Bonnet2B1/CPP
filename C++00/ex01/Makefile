@@ -45,9 +45,9 @@ CYAN 		:=	\033[1;36m
 all:			$(NAME)
 
 $(NAME):		$(OBJS)
-				@ echo "$(GREEN)Compilation $(CLR_RMV)of $(YELLOW)$(NAME) $(CLR_RMV)..."
+				@ echo -e "$(GREEN)Compilation $(CLR_RMV)of $(YELLOW)$(NAME) $(CLR_RMV)..."
 				@ $(CC) $(FLAGS) -o $(NAME) $(OBJS)
-				@ echo "$(YELLOW)$(NAME) $(GREEN)created $(CLR_RMV)✔️"
+				@ echo -e "$(YELLOW)$(NAME) $(GREEN)created $(CLR_RMV)✔️"
 
 
 
@@ -55,11 +55,11 @@ $(NAME):		$(OBJS)
 
 clean:
 				@ $(RM) $(OBJ_DIR)
-				@ echo "$(RED)Deleting $(CYAN)$(NAME) $(CLR_RMV)objs ✔️"
+				@ echo -e "$(RED)Deleting $(CYAN)$(NAME) $(CLR_RMV)objs ✔️"
 
 fclean:			clean
 				@ $(RM) $(NAME) $(RM)
-				@ echo "$(RED)Deleting $(CYAN)$(NAME) $(CLR_RMV)binary ✔️"
+				@ echo -e "$(RED)Deleting $(CYAN)$(NAME) $(CLR_RMV)binary ✔️"
 
 re:				fclean all
 
