@@ -29,6 +29,7 @@ OBJS		:=	$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 CXX			:=	c++
 CXXFLAGS		:=	-Wall -Wextra -Werror -std=c++98 -g3 -fsanitize=address
 RM			:=	rm -rf
+SHELL		:= /bin/bash
 
 $(OBJ_DIR)/%.o :%.cpp
 	@ mkdir -p $(dir $@)

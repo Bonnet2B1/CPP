@@ -25,6 +25,7 @@ OBJS		:=	$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 CC			:=	c++
 FLAGS		:=	-Wall -Wextra -Werror -std=c++98 -g3
 RM			:=	rm -rf
+SHELL		:= /bin/bash
 
 $(OBJ_DIR)/%.o :%.cpp
 	@ mkdir -p $(dir $@)
