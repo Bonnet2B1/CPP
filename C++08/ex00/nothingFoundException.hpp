@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   easyfind.hpp                                       :+:      :+:    :+:   */
+/*   nothingFoundException.hpp                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: edelarbr <edelarbr@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/06 10:27:41 by edelarbr          #+#    #+#             */
-/*   Updated: 2024/03/06 20:29:34 by edelarbr         ###   ########.fr       */
+/*   Created: 2024/03/06 20:22:11 by edelarbr          #+#    #+#             */
+/*   Updated: 2024/03/06 20:28:52 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef EASYFIND_HPP
-# define EASYFIND_HPP
+#ifndef NOTHINGFOUNDEXCEPTION_HPP
+# define NOTHINGFOUNDEXCEPTION_HPP
 
 # include <iostream>
-# include <vector>
-#include "nothingFoundException.hpp"
 
-template <typename T>
-typename T::value_type easyfind(T& container, int nbr)
+class nothingFoundException : public std::exception
 {
-	typename T::iterator it = container.begin();
-	while (it != container.end())
-	{
-		if (*it == nbr)
-			return *it;
-		++it;
+public:
+	nothingFoundException(const char* message);
+	virtual const char* what() const throw() {
+		return this->_message;
 	}
-	throw (nothingFoundException("Nothing found here :/"));
-}
 
-#endif
+private:
+	const char* _message;
+
+};
+
+#endif // NOTHINGFOUNDEXCEPTION_HPP
