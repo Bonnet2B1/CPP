@@ -6,7 +6,7 @@
 #    By: edelarbr <edelarbr@student.42mulhouse.fr>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/22 16:59:43 by edelarbr          #+#    #+#              #
-#    Updated: 2024/02/27 16:58:22 by edelarbr         ###   ########.fr        #
+#    Updated: 2024/03/06 20:00:26 by edelarbr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,12 @@ OBJS		:=	$(addprefix $(OBJ_DIR)/, $(SRCS:.cpp=.o))
 
 # ------------------------------ Flags -------------------------------
 
-CXX			:=	c++
+ifeq ($(shell uname -s), Darwin)
+	CXX := c++-11
+else
+	CXX := g++
+endif
+
 CXXFLAGS		:=	-Wall -Wextra -Werror -std=c++98
 RM			:=	rm -rf
 SHELL		:= /bin/bash
