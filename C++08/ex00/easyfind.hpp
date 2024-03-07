@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 10:27:41 by edelarbr          #+#    #+#             */
-/*   Updated: 2024/03/06 22:50:46 by edelarbr         ###   ########.fr       */
+/*   Updated: 2024/03/07 15:42:13 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,16 @@
 # define EASYFIND_HPP
 
 # include <iostream>
-# include <vector>
+# include <algorithm>
 # include "nothingFoundException.hpp"
 
 template <typename T>
-typename T::value_type easyfind(T& container, int nbr)
+typename T::value_type easyFind(T container, int nbr)
 {
-	typename T::iterator it = container.begin();
-	while (it != container.end())
-	{
-		if (*it == nbr)
-			return *it;
-		++it;
-	}
-	throw (nothingFoundException("Nothing found here :/"));
+	typename T::iterator it = std::find(container.begin(), container.end(), nbr);
+	if (*it != nbr)
+		throw (nothingFoundException("Nothing found here :/"));
+	return *it;
 }
 
 #endif
