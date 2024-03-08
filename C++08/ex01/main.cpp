@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 20:52:52 by edelarbr          #+#    #+#             */
-/*   Updated: 2024/03/07 23:07:08 by edelarbr         ###   ########.fr       */
+/*   Updated: 2024/03/08 12:21:40 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,3 @@ int main()
 
 	return (0);
 }
-
-/*
-expected result:
-2
-14
-*/
