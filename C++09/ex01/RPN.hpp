@@ -1,18 +1,12 @@
-#ifndef RPN_HPP
-# define RPN_HPP
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   RPN.hpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: edelarbr <edelarbr@student.42mulhouse.fr>  +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/03/09 22:58:14 by edelarbr          #+#    #+#             */
+/*   Updated: 2024/03/09 22:58:15 by edelarbr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-# include <iostream>
-
-class RPN
-{
-public:
-	RPN();
-	RPN(const RPN &src);
-	virtual ~RPN();
-	RPN &operator = (const RPN &rhs);
-
-private:
-
-};
-
-#endif // RPN_HPP
