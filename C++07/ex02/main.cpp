@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 19:22:59 by edelarbr          #+#    #+#             */
-/*   Updated: 2024/03/04 10:09:13 by edelarbr         ###   ########.fr       */
+/*   Updated: 2024/03/13 21:53:01 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int main() {
 	}
 
 	// === Pparker tests ===
-	Array<int> haha(5);
+	const Array<int> haha(5);
 	Array<int> test(haha);
 
 	test = haha;
