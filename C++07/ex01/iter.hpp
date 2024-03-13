@@ -6,12 +6,14 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 18:14:40 by edelarbr          #+#    #+#             */
-/*   Updated: 2024/02/27 18:45:37 by edelarbr         ###   ########.fr       */
+/*   Updated: 2024/03/13 21:42:23 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef ITER_HPP
 # define ITER_HPP
+
+# include <iostream>
 
 template <typename T>
 void	iter(T *array, int length, void (*function)(const T&)) {

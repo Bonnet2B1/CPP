@@ -6,11 +6,10 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 18:19:51 by edelarbr          #+#    #+#             */
-/*   Updated: 2024/02/27 18:47:22 by edelarbr         ###   ########.fr       */
+/*   Updated: 2024/03/13 21:42:29 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
 #include "iter.hpp"
 
 int	main() {
