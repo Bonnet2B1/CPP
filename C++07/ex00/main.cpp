@@ -6,12 +6,11 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 17:19:25 by edelarbr          #+#    #+#             */
-/*   Updated: 2024/02/27 18:12:12 by edelarbr         ###   ########.fr       */
+/*   Updated: 2024/03/13 21:39:35 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "whatever.hpp"
-#include <iostream>
 
 int	main() {
 	int a = 2;

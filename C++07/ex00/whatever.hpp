@@ -6,12 +6,14 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 16:58:28 by edelarbr          #+#    #+#             */
-/*   Updated: 2024/02/27 18:10:51 by edelarbr         ###   ########.fr       */
+/*   Updated: 2024/03/13 21:35:12 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WHATEVER_HPP
 # define WHATEVER_HPP
+
+# include <iostream>
 
 template <typename T>
 void	swap(T& a, T& b) {
