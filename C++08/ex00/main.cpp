@@ -6,14 +6,14 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 12:50:37 by edelarbr          #+#    #+#             */
-/*   Updated: 2024/03/14 16:10:24 by edelarbr         ###   ########.fr       */
+/*   Updated: 2024/03/14 20:43:55 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <vector>
 #include <list>
-#include "easyFind.tpp"
+#include "easyfind.tpp"
 
 int main()
 {
