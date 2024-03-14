@@ -6,14 +6,14 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 12:50:37 by edelarbr          #+#    #+#             */
-/*   Updated: 2024/03/07 22:34:29 by edelarbr         ###   ########.fr       */
+/*   Updated: 2024/03/14 16:10:24 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <iostream>
 #include <vector>
 #include <list>
-#include "easyFind.hpp"
+#include "easyFind.tpp"
 
 int main()
 {
@@ -23,7 +23,7 @@ int main()
 
 	try
 	{
-		std::cout << easyFind(vec, 42) << " was found in vec" << std::endl;
+		std::cout << easyFind(vec, 42) << " was found in vector" << std::endl;
 	}
 	catch (std::exception &e)
 	{

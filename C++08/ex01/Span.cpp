@@ -6,15 +6,18 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 16:34:50 by edelarbr          #+#    #+#             */
-/*   Updated: 2024/03/07 23:06:13 by edelarbr         ###   ########.fr       */
+/*   Updated: 2024/03/14 16:53:29 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Span.hpp"
 
 Span::Span() : _N(0) {}
+
 Span::Span(const Span &src) : _N(src._N) { *this = src; }
+
 Span::~Span() {}
+
 Span &Span::operator = (const Span &rhs)
 {
 	if (this != &rhs)
@@ -27,10 +30,10 @@ Span &Span::operator = (const Span &rhs)
 
 Span::Span(unsigned int N) : _N(N) {}
 
-void	Span::addNumber(int add)
+void	Span::addNumber(int nbr)
 {
 	if (this->_span.size() < this->_N)
-		this->_span.push_back(add);
+		this->_span.push_back(nbr);
 	else
 		throw SpanException("Already full");
 }
@@ -89,8 +92,11 @@ void	Span::printSpanContent() const
 }
 
 Span::SpanException::SpanException() : _message("SpanException") {}
+
 Span::SpanException::SpanException(const SpanException &src) : _message(src._message) {}
+
 Span::SpanException::~SpanException() throw() {}
+
 Span::SpanException &Span::SpanException::operator = (const SpanException &rhs)
 {
 	if (this != &rhs)
