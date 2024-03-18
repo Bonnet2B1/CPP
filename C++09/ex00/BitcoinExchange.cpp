@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 19:51:59 by edelarbr          #+#    #+#             */
-/*   Updated: 2024/03/13 19:22:18 by edelarbr         ###   ########.fr       */
+/*   Updated: 2024/03/18 18:04:39 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ std::string	BitcoinExchange::change(std::string inputFilePath)
 
 void	BitcoinExchange::operations()
 {
-	for (std::vector<std::pair<std::string, float> >::iterator it = this->_input.begin(); it != this->_input.end(); it++)
+	for (std::list<std::pair<std::string, float> >::iterator it = this->_input.begin(); it != this->_input.end(); it++)
 	{
 		if(inputLineIsValid(it->first, it->second))
 			this->_returnPrompt << it->first << " => " << it->second << " = " << it->second * findCorrespondence(it->first) << std::endl;
@@ -133,6 +133,7 @@ void	BitcoinExchange::inputFileIsValid()
 	std::string		testString;
 
 	this->_inputFile.open(this->_inputFilePath.c_str());
+
 	if (!this->_inputFile.is_open())
 		throw std::invalid_argument("Error input file: can't open");
 
