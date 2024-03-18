@@ -1,12 +1,24 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   RPN.hpp                                            :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: edelarbr <edelarbr@student.42mulhouse.fr>  +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/03/09 22:58:14 by edelarbr          #+#    #+#             */
-/*   Updated: 2024/03/09 22:58:15 by edelarbr         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#ifndef RPN_HPP
+# define RPN_HPP
 
+# include <stack>
+# include <iostream>
+
+class RPN
+{
+public:
+	RPN();
+	RPN(const RPN &src);
+	virtual ~RPN();
+	RPN &operator = (const RPN &rhs);
+
+	bool		calculateRPN(int argc, char **argv);
+
+private:
+	bool		strIsNum(std::string str);
+	bool		strIsSign(std::string str);
+	void		makeOperation(char sign, std::stack<int> *stack);
+
+};
+
+#endif // RPN_HPP
