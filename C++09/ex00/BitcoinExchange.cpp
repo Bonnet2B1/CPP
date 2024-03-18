@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/10 19:51:59 by edelarbr          #+#    #+#             */
-/*   Updated: 2024/03/18 18:04:39 by edelarbr         ###   ########.fr       */
+/*   Updated: 2024/03/18 20:54:57 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,11 @@ bool	BitcoinExchange::inputLineIsValid(std::string date, float value)
 		|| date[10])
 	{
 		this->_returnPrompt << "Error: bad input => " << date << std::endl;
+		return (false);
+	}
+	else if (date < this->_dataBase.begin()->first)
+	{
+		this->_returnPrompt << "Error: bad input => " << date << ": no data found at or before this date" << std::endl;
 		return (false);
 	}
 	else if (value < 0)
