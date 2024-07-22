@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Intern.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: edelarbr <edelarbr@student.42mulhouse.f    +#+  +:+       +#+        */
+/*   By: edelarbr <edelarbr@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 17:29:33 by edelarbr          #+#    #+#             */
-/*   Updated: 2024/02/19 19:19:11 by edelarbr         ###   ########.fr       */
+/*   Updated: 2024/04/23 15:42:44 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ AForm	*Intern::makeForm(std::string formName, std::string target) {
 	AForm* formList[3] = { new ShrubberyCreationForm(target), new RobotomyRequestForm(target), new PresidentialPardonForm(target) };
 	AForm* ret = 0;
 	for (int i = 0; i < 3; i++) {
-	if (formNameList[i] == formName)
+		if (formNameList[i] == formName)
 			ret = formList[i];
 		else
 			delete formList[i];

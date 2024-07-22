@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/27 19:23:17 by edelarbr          #+#    #+#             */
-/*   Updated: 2024/03/04 09:58:40 by edelarbr         ###   ########.fr       */
+/*   Updated: 2024/03/27 19:35:32 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ public:
 
 private:
 	int	_size;
-	T *_array;
+	T*	_array;
 };
 
 #endif

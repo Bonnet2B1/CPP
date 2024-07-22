@@ -6,7 +6,7 @@
 #    By: edelarbr <edelarbr@student.42mulhouse.fr>  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/07/22 16:59:43 by edelarbr          #+#    #+#              #
-#    Updated: 2024/03/06 20:00:26 by edelarbr         ###   ########.fr        #
+#    Updated: 2024/06/11 18:14:17 by edelarbr         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,7 +35,7 @@ SHELL		:= /bin/bash
 
 $(OBJ_DIR)/%.o :%.cpp
 	@ mkdir -p $(dir $@)
-	@ $(CXX) $(CXXFLAGS) $(INC_RL) -c $< -o $@
+	@ $(CXX) $(CXXFLAGS) -c $< -o $@
 
 # ------------------------------ Colors ------------------------------
 
@@ -64,7 +64,7 @@ clean:
 				@ echo -e "$(RED)Deleting $(CYAN)$(NAME) $(CLR_RMV)objs ✔️"
 
 fclean:			clean
-				@ $(RM) $(NAME) $(RM)
+				@ $(RM) $(NAME)
 				@ echo -e "$(RED)Deleting $(CYAN)$(NAME) $(CLR_RMV)binary ✔️"
 
 re:				fclean all

@@ -6,7 +6,7 @@
 /*   By: edelarbr <edelarbr@student.42mulhouse.fr>  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/19 17:27:31 by edelarbr          #+#    #+#             */
-/*   Updated: 2024/02/26 20:32:25 by edelarbr         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:01:58 by edelarbr         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,8 @@ public:
 	virtual ~Serializer();
 	Serializer &operator = (const Serializer &rhs);
 
-	static __intptr_t	serialize(Data* ptr);
-	static Data*		deserialize(__intptr_t raw);
+	static uintptr_t	serialize(Data* ptr);
+	static Data*		deserialize(uintptr_t raw);
 private:
 	Serializer();
 	Serializer(const Serializer &src);
